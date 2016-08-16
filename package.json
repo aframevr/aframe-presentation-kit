@@ -1,0 +1,29 @@
+{
+  "name": "aframe-presentation-kit",
+  "version": "1.0.0",
+  "description": "Official starter slides for giving talks and presentations about A-Frame.",
+  "main": "main.js",
+  "scripts": {
+    "start": "python -m SimpleHTTPServer 5000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ngokevin/aframe-presentation-kit.git"
+  },
+  "keywords": [
+    "aframe",
+    "slides",
+    "presentation",
+    "reveal",
+    "reveal.js",
+    "vr",
+    "webvr",
+    "slidedeck"
+  ],
+  "author": "Kevin Ngo <kngo@mozilla.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ngokevin/aframe-presentation-kit/issues"
+  },
+  "homepage": "https://github.com/ngokevin/aframe-presentation-kit#readme"
+}
