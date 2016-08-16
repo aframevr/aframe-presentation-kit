@@ -3,10 +3,10 @@ Reveal.initialize({
   history: true,
   // https://github.com/hakimel/reveal.js#dependencies
   dependencies: [
-    {src: 'vendor/plugin/markdown/marked.js'},
-    {src: 'vendor/plugin/markdown/markdown.js'},
-    {src: 'vendor/plugin/notes/notes.js', async: true},
-    {src: 'vendor/plugin/highlight/highlight.js', async: true, callback: function () {
+    {src: 'src/vendor/plugin/markdown/marked.js'},
+    {src: 'src/vendor/plugin/markdown/markdown.js'},
+    {src: 'src/vendor/plugin/notes/notes.js', async: true},
+    {src: 'src/vendor/plugin/highlight/highlight.js', async: true, callback: function () {
       hljs.initHighlightingOnLoad();
     }}
   ]
