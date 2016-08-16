@@ -2,6 +2,8 @@
 
 Official starter slides for giving talks and presentations about A-Frame.
 
+[VIEW SLIDES](https://ngokevin.github.io/aframe-presentation-kit/)
+
 ## Installation
 
 1. [Download the repository (.ZIP)](https://github.com/ngokevin/aframe-presentation-kit/archive/master.zip)
@@ -27,7 +29,7 @@ slides depending on the answers to these questions:
 
 ## Deployment
 
-Run `npm run ghpages` to deploy the slides to GitHub pages. It can then be
-accessed from anywhere via
+Run `npm install && npm run ghpages` to deploy the slides to GitHub pages. It
+can then be accessed from anywhere via
 `https://yourusername.github.io/aframe-presentation-kit` (or whatever your
 repository's name is).

@@ -4,6 +4,7 @@
   "description": "Official starter slides for giving talks and presentations about A-Frame.",
   "main": "main.js",
   "scripts": {
+    "ghpages": "ghpages",
     "start": "python -m SimpleHTTPServer 5000"
   },
   "repository": {
@@ -25,5 +26,9 @@
   "bugs": {
     "url": "https://github.com/ngokevin/aframe-presentation-kit/issues"
   },
-  "homepage": "https://github.com/ngokevin/aframe-presentation-kit#readme"
+  "homepage": "https://github.com/ngokevin/aframe-presentation-kit#readme",
+  "devDependencies": {
+    "ghpages": "0.0.8",
+    "shx": "^0.1.3"
+  }
 }
