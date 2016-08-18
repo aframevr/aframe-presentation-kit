@@ -16,12 +16,13 @@ The kit uses [reveal.js](https://github.com/hakimel/reveal.js/), an HTML
 presentation framework. Read their documentation to see how to style and
 present content the way you wish.
 
-Modify the `index.html` file to edit slides and content. Slides are contained
-within `<section>`s. The first place to start would be to update the author,
-date, and location in the title slide.
+Modify the **CONTENT.md** file to edit content. Slides are written in Markdown
+and separated by three hyphens `---`.  The first place to start would be to
+update the author, date, and location in the title slide.
 
 We suggest tailoring the content to your audience. You may want to filter out
-slides depending on the answers to these questions:
+slides depending on the answers to these questions (as well as the allotted
+length of your talk):
 
 - Is your audience familiar with virtual reality?
 - Is your audience familiar with WebVR?
@@ -29,7 +30,8 @@ slides depending on the answers to these questions:
 
 ## Deployment
 
-Run `npm install && npm run ghpages` to deploy the slides to GitHub pages. It
-can then be accessed from anywhere via
-`https://yourusername.github.io/aframe-presentation-kit` (or whatever your
-repository's name is).
+In your GitHub repository settings page under **GitHub Pages** and *Source*,
+select `master branch`. Then simply push to GitHub and your slides will be live
+at `https://yourusername.github.io/aframe-presentation-kit` or whatever you
+named the repository. [Read
+more](https://github.com/blog/2228-simpler-github-pages-publishing).

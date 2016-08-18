@@ -1,59 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>A-Frame: Building Blocks for the VR Web</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta name="description" content="Presentation slides about A-Frame, a web framework for building virtual reality experiences with HTML.">
-<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
-<link rel="stylesheet" href="src/vendor/css/reveal.css">
-<link rel="stylesheet" href="src/vendor/lib/css/zenburn.css">
-<script src="src/vendor/js/print-and-pdf-export.js"></script>
-<link rel="stylesheet" href="src/main.css">
-</head>
-<body>
-<div class="reveal">
-<div class="slides">
-<!-- BEGIN SLIDES -->
+  <head>
+    <title>A-Frame: Building Blocks for the VR Web</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Slides about A-Frame, a web framework for building virtual reality experiences with HTML.">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="src/vendor/css/reveal.css">
+    <link rel="stylesheet" href="src/vendor/lib/css/zenburn.css">
+    <script src="src/vendor/js/print-and-pdf-export.js"></script>
+    <link rel="stylesheet" href="src/main.css">
+  </head>
 
-<section data-markdown="slides/01-title.md"></section>
-<section data-markdown="slides/02-vr.md"></section>
-<section data-markdown="slides/03-hardware.md"></section>
-
-<!-- Introduction to WebVR -->
-<section>
-<h2 style="text-transform: none">WebVR</h2>
-<h3>Virtual reality in the browser, leveraging the existing Web platform</h3>
-<p class="fragment">Open: anyone can publish, no gatekeepers</p>
-<p class="fragment">Connected: traverse from world to world, just like we traverse from page to page with links</p>
-<p class="fragment">Instant: no installs, no updates</p>
-</section>
-
-
-<!-- Introduction to A-Frame -->
-<section>
-<h2>A-Frame</h2>
-<p>A web framework for building virtual reality experiences with HTML.</p>
-<pre><code data-trim>
-<a-scene>
-  <a-box color="red" position="-1 0.5 -3" rotation="0 45 0"></a-box>
-  <a-cylinder color="#FFC65D" position="1 0.75 -3" radius="0.5" height="1.5"></a-cylinder>
-  <a-sphere color="#EF2D5E" position="0 1.25 -5" radius="1.25"></a-sphere>
-  <a-plane color="#7BC8A4" rotation="-90 0 0" position="0 0 -4" width="4" height="4"></a-plane>
-  <a-sky color="#ECECEC"></a-sky>
-</a-scene>
-</pre></code>
-</section>
-
-<!-- A-Frame ecosystem -->
-
-<!-- Getting involved with A-Frame -->
-
-<!-- END SLIDES -->
-</div>
-</div>
-<script src="src/vendor/lib/js/head.min.js"></script>
-<script src="src/vendor/js/reveal.js"></script>
-<script src="src/main.js"></script>
-</body>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-markdown="CONTENT.md"></section>
+      </div>
+    </div>
+    <script src="src/vendor/lib/js/head.min.js"></script>
+    <script src="src/vendor/js/reveal.js"></script>
+    <script src="src/main.js"></script>
+  </body>
 </html>
