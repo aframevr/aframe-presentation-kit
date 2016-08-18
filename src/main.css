@@ -2,8 +2,7 @@
  * White theme for reveal.js.
  * By Hakim El Hattab, http://hakim.se
  *
- * Adapted for A-Frame:
- * - Changed font-family to Fira Sans.
+ * Adapted and modified for aframe-presentation-kit by Kevin Ngo.
  */
 section.has-dark-background, section.has-dark-background h1, section.has-dark-background h2, section.has-dark-background h3, section.has-dark-background h4, section.has-dark-background h5, section.has-dark-background h6 {
   color: #fff; }
@@ -145,24 +144,25 @@ body {
 .reveal pre {
   display: block;
   position: relative;
-  width: 90%;
   margin: 20px auto;
   text-align: left;
   font-size: 0.55em;
   font-family: monospace;
   line-height: 1.2em;
   word-wrap: break-word;
-  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3); }
+}
 
 .reveal code {
   font-family: monospace; }
 
 .reveal pre code {
   display: block;
-  padding: 5px;
+  line-height: 32px;
+  padding: 20px;
   overflow: auto;
   max-height: 400px;
-  word-wrap: normal; }
+  word-wrap: normal;
+}
 
 .reveal table {
   margin: auto;

@@ -6,13 +6,13 @@
 
 @you / 01 January 2016 / San Francisco, CA
 
----
+------
 
 # Virtual Reality (VR)
 
 Technology that simulates physical presence in interactive and realistic 3D environments
 
----
+------
 
 ## Hardware
 
@@ -28,7 +28,7 @@ Technology that simulates physical presence in interactive and realistic 3D envi
   <div><img data-src="media/img/htc-vive.png"></div>
 </div>
 
----
+------
 
 ## WebVR <!-- .element: style="text-transform: none" -->
 
@@ -51,9 +51,26 @@ An open virtual reality platform with the advantages of the Web
 
 ---
 
+## WebVR API
+
+- W3C-track browser API
+- Render WebGL into VR headsets
+- Access to various sensors for orientation, position, and input
+
+---
+
+## Browser Support
+
+- Firefox
+- Chrome
+- Samsung GearVR
+- Mobile browsers with WebVR polyfill
+
+------
+
 ## A-Frame
 
-A web framework for building virtual reality experiences with HTML.
+A web framework for building virtual reality experiences with HTML
 
 ```html
 <a-scene>
