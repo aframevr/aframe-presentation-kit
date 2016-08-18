@@ -1,4 +1,4 @@
-![](media/img/aframe-logo-rendered.png) <!-- .element: class="stretch" -->
+<img class="stretch" data-src="media/img/aframe-logo-rendered.png">
 
 # A-Frame
 
@@ -16,23 +16,38 @@ Technology that simulates physical presence in interactive and realistic 3D envi
 
 ## Hardware
 
-![](media/img/google-cardboard.png)
-![](media/img/google-daydream.png)
-![](media/img/oculus-rift.png)
+<div class="image-row">
+  <div><img data-src="media/img/google-cardboard.png"></div>
+  <div><img data-src="media/img/google-daydream.png"></div>
+  <div><img data-src="media/img/oculus-rift.png"></div>
+</div>
 
-HTC Vive
-
-Samsung GearVR
+<div class="image-row">
+  <div><img data-src="media/img/samsung-gearvr.png"></div>
+  <div><img data-src="media/img/playstation-vr.png"></div>
+  <div><img data-src="media/img/htc-vive.png"></div>
+</div>
 
 ---
 
 ## WebVR <!-- .element: style="text-transform: none" -->
 
-Virtual reality in the browser, leveraging the existing Web platform
+An open virtual reality platform with the advantages of the Web
 
-- Open
-- Interconnected
-- Instant
+<div class="captioned-image-row">
+  <div>
+    <img data-src="media/img/web-is-open.png">
+    <i>Open</i>
+  </div>
+  <div>
+    <img data-src="media/img/web-is-connected.png">
+    <i>Connected</i>
+  </div>
+  <div>
+    <img data-src="media/img/web-is-instant.png">
+    <i>Instant</i>
+  </div>
+</div>
 
 ---
 
