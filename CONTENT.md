@@ -10,7 +10,15 @@
 
 # Virtual Reality (VR)
 
-Technology that simulates physical presence in interactive and realistic 3D environments
+Technology that simulates physical presence in interactive and realistic 3D
+environments
+
+---
+
+## The Next Platform
+
+Will change the way we work, play, and communicate digitally across every field
+and industry
 
 ---
 
@@ -28,9 +36,34 @@ Technology that simulates physical presence in interactive and realistic 3D envi
   <div><img data-src="media/img/htc-vive.png"></div>
 </div>
 
+<!-- Speaker Notes -->
+
+- **Cardboard**: smartphones in holders; low-quality experiences; accessible
+- **Daydream**: VR-ready Android; 3DoF controller
+- **Rift**: Facebook; the firestarter; waiting for Touch controllers
+- **GearVR**: untethered; decent quality experiences; many already own Samsung phones
+- **Playstation**: cheap; many already own console
+- **Vive**: Steam; most compelling platform
+
+---
+
+## Friction
+
+- App stores and gatekeepers
+- Downloads and installs
+- Proprietary and closed culture
+
+<!-- Speaker Notes -->
+
+- App stores and gatekeepers
+- Downloads and installs
+- Proprietary and closed culture
+- Review queues
+- For experts only
+
 ------
 
-## WebVR <!-- .element: style="text-transform: none" -->
+# WebVR
 
 An open virtual reality platform with the advantages of the Web
 
@@ -53,8 +86,17 @@ An open virtual reality platform with the advantages of the Web
 
 <img class="stretch" data-src="media/img/webvr.png">
 
-Set of **browser APIs** that enable **WebGL rendering to headsets** and **access to
-various VR sensors** for pose and input. https://w3c.github.io/webvr/
+Set of **standard browser APIs** that enable **WebGL rendering to headsets**
+and **access to various VR sensors** for pose and input.
+https://w3c.github.io/webvr/
+
+---
+
+## Applications
+
+- Long tail experiences
+- E-commerce
+- Social media
 
 ---
 
@@ -81,7 +123,7 @@ various VR sensors** for pose and input. https://w3c.github.io/webvr/
 
 ------
 
-## A-Frame
+# A-Frame
 
 A web framework for building virtual reality experiences with HTML
 
@@ -109,17 +151,23 @@ A web framework for building virtual reality experiences with HTML
   </a-scene>
 </div>
 
+---
+
+## Hardware
+
+Works across desktop, iOS, Android, Oculus Rift, HTC Vive
+
 ------
 
-## Why A-Frame?
+# Why A-Frame?
 
 - **Simple** to get started with zero boilerplate
-- **Easy** to understand for web developers
-- **Powerful** to develop with entity-component-system
+- **Easy** to understand for web developers and designers
+- **Powerful** to develop with declarative entity-component-system
 
 ---
 
-## Simple: Zero Boilerplate
+## Zero Boilerplate
 
 <div class="slide__boilerplate">
   <p>Import WebVR polyfill</p>
@@ -136,12 +184,12 @@ A web framework for building virtual reality experiences with HTML
   <p>Deal with metatags and mobile</p>
 </div>
 
-<video data-src="media/video/boilerplate.mp4" autoplay loop></video>
+<video data-src="media/video/boilerplate.mp4" data-autoplay loop></video>
 <!-- .element: style="opacity: 0.2" -->
 
 ---
 
-## Simple: Zero Boilerplate
+## Zero Boilerplate
 
 ```html
 <a-scene></a-scene>
@@ -149,7 +197,7 @@ A web framework for building virtual reality experiences with HTML
 
 ---
 
-## Simple: Zero Boilerplate
+## Zero Boilerplate
 
 ```js
 // With three.js
@@ -162,7 +210,7 @@ scene.add(box);
 
 ---
 
-## Simple: Zero Boilerplate
+## Zero Boilerplate
 
 ```html
 <a-box color="red" position="10 0 10"></a-box>
@@ -170,10 +218,10 @@ scene.add(box);
 
 ---
 
-## Easy: Familiar for Web Developers
+## Familiar for Web Developers
 
-- Can get by with just HTML
-- Same old DOM APIs
+- HTML
+- JavaScript and DOM APIs
 - Integrates with existing frameworks and libraries
 
 ```js
@@ -185,54 +233,142 @@ scene.appendChild(sphere);
 
 ---
 
-## Easy: Familiar for Web Developers
+## Familiar for Web Developers
 
-```js
-var scene = document.querySelector('a-scene');
-var sphere = document.createElement('a-sphere');
-sphere.setAttribute('radius', 2);
-scene.appendChild(sphere);
+- d3.js
+- React & Redux
+- vue.js
+
+---
+
+## Integrates with 3D Workflows
+
+- MagicaVoxel
+- Blender
+- Maya
+
+------
+
+# Entity-Component-System
+
+<img class="stretch" data-src="media/img/entity-component-system.png">
+
+- Composable, reusable, sharable bits of code
+- All the power of JavaScript, three.js, and WebGL
+- Developers empower other developers
+
+---
+
+## Composing an Entity
+
+```html
+<a-entity></a-entity>
 ```
 
 ---
 
-## Easy: Familiar for Web Developers
 
-- d3.js  <!-- .element: class="fragment" -->
-- React & Redux  <!-- .element: class="fragment" -->
-- vue.js  <!-- .element: class="fragment" -->
+## Composing an Entity
+
+```html
+<a-entity geometry="primitive: plane; height: 10000; width: 10000">
+```
 
 ---
 
-## Easy: Also Integrates with 3D Workflows
+## Composing an Entity
 
-- MagicaVoxel  <!-- .element: class="fragment" -->
-- Blender  <!-- .element: class="fragment" -->
-- Maya  <!-- .element: class="fragment" -->
+```html
+<a-entity geometry="primitive: plane; height: 10000; width: 10000"
+          rotation="-90 0 0">
+```
+
+---
+
+## Composing an Entity
+
+```html
+<a-entity geometry="primitive: plane; height: 10000; width: 10000"
+          rotation="-90 0 0"
+          material="shader: standard; opacity: 0.8">
+```
+
+---
+
+## Composing an Entity
+
+```html
+<a-entity geometry="primitive: plane; height: 10000; width: 10000"
+          rotation="-90 0 0"
+          material="shader: standard; normalTextureRepeat: 50 50; opacity: 0.8"
+          ocean-waves="intensity: 0.7">
+```
+
+---
+
+## Baking an Entity
+
+```js
+AFRAME.registerPrimitive('a-ocean', {
+  defaultComponents: {
+    'ocean-waves': {intensity: 0.7}
+  },
+
+  mappings: {
+    'reflection': 'material.sphericalEnvMap',
+    'wave-intensity': 'ocean-waves.intensity'
+  }
+});
+```
+
+```html
+<a-ocean reflection="url(sky.png)" wave-intensity="2"></a-ocean>
+```
+
+---
+
+## Writing a Component
+
+```js
+AFRAME.registerComponent('position', {
+  schema: {type: 'vec3'},
+
+  update: function () {
+    var el = this.el;  // Reference to the entity element.
+    var data = this.data;  // Component data parsed from HTML.
+    var object3D = el.object3D;  // three.js Object.
+
+    object3D.position.set(data.x, data.y, data.z);
+  }
+});
+```
+
+---
+
+## Writing a Component
+
+```js
+AFRAME.registerComponent('crazy-position', {
+  schema: {
+    min: {type: 'vec3'},
+    max: {type: 'vec3'}
+  },
+
+  tick: function () {
+    var data = this.data;
+    var randomPosition = __getRandomPosition(min, max);
+    this.el.object3D.position.copy(randomPosition);
+  }
+});
+```
+
+```html
+<a-sphere crazy-position="min: -1 -1 -1; max: 1 1 1"></a-sphere>
+```
 
 ------
 
-## Entity-Component-System Framework
-
-- Composable, reusable, sharable bits of code
-- All the power of JavaScript, three.js, and WebGL
-- Developers empowering developers
-
----
-
-## Syntax
-
-Lorem ipsum
-
----
-
-## Building a Component
-
-Lorem ipsum
-
-------
-
-## Community
+# Community
 
 - **Github**: 60 contributors, 2800 stargazers
 - **Slack**: 1300 members
@@ -244,13 +380,25 @@ Lorem ipsum
 
 Lorem ipsum
 
+---
+
+## Pieces from Organizations
+
+- [360syria.com](https://360syria.com) (Amnesty International UK)
+- [apps.npr.org/rockymountain-vr](http://apps.npr.org/rockymountain-vr/)
+- [gurivr.com](https://gurivr.com/) (The Coral Project)
+- [washingtonpost.com/graphics/business/mars-journey](https://www.washingtonpost.com/graphics/business/mars-journey/)
+- [shopifyvr.myshopify.com](https://shopifyvr.myshopify.com/)
+
 ------
 
-## Augmented Reality
+# Augmented Reality
+
+<video class="stretch" data-src="media/video/argon.mp4" data-autoplay loop></video>
 
 ------
 
-## Questions?
+# Questions?
 
 - [aframe.io](https://aframe.io)
 - [github.com/aframevr/aframe](https://github.com/aframevr/aframe)

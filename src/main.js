@@ -28,10 +28,9 @@ function fixWrappedImages () {
   }
 }
 
-// Ensure videos are played on slide change
-Reveal.addEventListener('slidechanged', function playVideos (evt) {
-  var videos = evt.currentSlide.querySelectorAll('video');
-  for (var i = 0; i < videos.length; i++) {
-    videos[i].play();
-  }
+// Trigger resize on A-Frame scenes as workaround for sometimes missing.
+Reveal.addEventListener('slidechanged', function sceneResize (evt) {
+  var scene = evt.currentSlide.querySelector('a-scene');
+  if (!scene) { return; }
+  scene.resize();
 });
