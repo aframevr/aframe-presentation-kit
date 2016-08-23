@@ -67,6 +67,9 @@ computer so there aren't constant reflows from downloading images and videos.
 
 Press the `s` key on your keyboard to open up the Speakers Notes window.
 
+Press the `<esc>` or `o` key on your keyboard to see a zoomed out overview of
+the slides.
+
 There are some slides with embedded A-Frame scenes. You can play with these
 scenes live from right within the slide. Click-drag to look around. You may
 also enter fullscreen or enter VR with a headset connected, again from right
