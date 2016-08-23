@@ -9,7 +9,8 @@ Reveal.initialize({
     {src: 'src/vendor/plugin/highlight/highlight.js', async: true, callback: function () {
       hljs.initHighlightingOnLoad();
     }}
-  ]
+  ],
+  margin: 0
 });
 
 // Fix Markdown wrapping <img> in <p>.
@@ -26,3 +27,11 @@ function fixWrappedImages () {
     section.removeChild(p);
   }
 }
+
+// Ensure videos are played on slide change
+Reveal.addEventListener('slidechanged', function playVideos (evt) {
+  var videos = evt.currentSlide.querySelectorAll('video');
+  for (var i = 0; i < videos.length; i++) {
+    videos[i].play();
+  }
+});

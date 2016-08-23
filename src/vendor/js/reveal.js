@@ -2930,6 +2930,7 @@
 				// Videos
 				else if ( backgroundVideo && !isSpeakerNotes() ) {
 					var video = document.createElement( 'video' );
+          console.log(backgroundVideo);
 
 					if( backgroundVideoLoop ) {
 						video.setAttribute( 'loop', '' );

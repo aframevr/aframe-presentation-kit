@@ -45,10 +45,9 @@ body {
   margin: 0 0 20px 0;
   color: #333;
   font-family: "Fira Sans", Helvetica, sans-serif;
-  font-weight: 500;
+  font-weight: bold;
   line-height: 1.2;
   letter-spacing: normal;
-  text-transform: uppercase;
   text-shadow: none;
   word-wrap: break-word; }
 
@@ -291,6 +290,20 @@ body {
 /*********************************************
  * ADDED BY KEVIN NGO
  *********************************************/
+.reveal section a {
+  color: #24CAFF;
+  cursor: pointer;
+}
+
+.reveal section a:hover {
+  color: #B96FD3;
+}
+
+.reveal section ul {
+  list-style: square;
+  margin-left: 0;
+}
+
 .image-row {
   display: flex;
 }
@@ -326,4 +339,30 @@ body {
 
 body:not(.aframe-inspector-opened) .toggle-edit {
   display: none;
+}
+
+div.slide__boilerplate {
+  color: #333;
+  display: flex;
+  flex-wrap: wrap;
+  font-style: italic;
+  justify-content: space-around;
+  padding: 0 5%;
+  position: absolute;
+  z-index: 1;
+}
+
+div.slide__boilerplate p {
+  font-size: 32px;
+  margin-right: 48px;
+  font-weight: 300;
+}
+
+div.slide__boilerplate p:after {
+  content: '\2026';  // &hellip;
+}
+
+div.slide__boilerplate + video {
+  opacity: 0.5;
+  z-index: 0;
 }

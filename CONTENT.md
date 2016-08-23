@@ -58,7 +58,7 @@ various VR sensors** for pose and input. https://w3c.github.io/webvr/
 
 ---
 
-## Current WebVR Browser Support
+## Browser Support
 
 <div class="captioned-image-row">
   <div>
@@ -67,11 +67,11 @@ various VR sensors** for pose and input. https://w3c.github.io/webvr/
   </div>
   <div>
     <img data-src="media/img/chromium.png">
-    <i>Experimental Chromium</i>
+    <i>Chromium (Experimental)</i>
   </div>
   <div>
     <img data-src="media/img/samsung-browser.png">
-    <i>Samsung Browser</i>
+    <i>Samsung Internet</i>
   </div>
   <div>
     <img data-src="media/img/google-cardboard.png">
@@ -109,31 +109,149 @@ A web framework for building virtual reality experiences with HTML
   </a-scene>
 </div>
 
+------
+
+## Why A-Frame?
+
+- **Simple** to get started with zero boilerplate
+- **Easy** to understand for web developers
+- **Powerful** to develop with entity-component-system
+
 ---
 
-<video data-src="media/video/aframe-reduces-boilerplate.mp4" data-autoplay
-       data-background-video></video>
+## Simple: Zero Boilerplate
+
+<div class="slide__boilerplate">
+  <p>Import WebVR polyfill</p>
+  <p>Set up camera</p>
+  <p>Set up lights</p>
+  <p>Initialize scene</p>
+  <p>Declare and pass canvas</p>
+  <p>Listen to window resize</p>
+  <p>Install VREffect</p>
+  <p>Instantiate renderer</p>
+  <p>Create render loop</p>
+  <p>Preload assets</p>
+  <p>Figure out responsiveness</p>
+  <p>Deal with metatags and mobile</p>
+</div>
+
+<video data-src="media/video/boilerplate.mp4" autoplay loop></video>
+<!-- .element: style="opacity: 0.2" -->
 
 ---
 
-## Web Developers Love A-Frame
+## Simple: Zero Boilerplate
+
+```html
+<a-scene></a-scene>
+```
 
 ---
 
-## Entity-Component-System (ECS)
+## Simple: Zero Boilerplate
+
+```js
+// With three.js
+var geometry = new THREE.BoxGeometry(1, 2, 3);
+var material = new THREE.MeshStandardMaterial({color: 'red'});
+var box = new THREE.Mesh(geometry, material);
+box.position.set(10, 0, 10);
+scene.add(box);
+```
+
+---
+
+## Simple: Zero Boilerplate
+
+```html
+<a-box color="red" position="10 0 10"></a-box>
+```
+
+---
+
+## Easy: Familiar for Web Developers
+
+- Can get by with just HTML
+- Same old DOM APIs
+- Integrates with existing frameworks and libraries
+
+```js
+var scene = document.querySelector('a-scene');
+var sphere = document.createElement('a-sphere');
+sphere.setAttribute('radius', 2);
+scene.appendChild(sphere);
+```
+
+---
+
+## Easy: Familiar for Web Developers
+
+```js
+var scene = document.querySelector('a-scene');
+var sphere = document.createElement('a-sphere');
+sphere.setAttribute('radius', 2);
+scene.appendChild(sphere);
+```
+
+---
+
+## Easy: Familiar for Web Developers
+
+- d3.js  <!-- .element: class="fragment" -->
+- React & Redux  <!-- .element: class="fragment" -->
+- vue.js  <!-- .element: class="fragment" -->
+
+---
+
+## Easy: Also Integrates with 3D Workflows
+
+- MagicaVoxel  <!-- .element: class="fragment" -->
+- Blender  <!-- .element: class="fragment" -->
+- Maya  <!-- .element: class="fragment" -->
+
+------
+
+## Entity-Component-System Framework
+
+- Composable, reusable, sharable bits of code
+- All the power of JavaScript, three.js, and WebGL
+- Developers empowering developers
 
 ---
 
 ## Syntax
 
+Lorem ipsum
+
 ---
 
-## Registering a Custom Component
+## Building a Component
+
+Lorem ipsum
 
 ------
 
 ## Community
 
+- **Github**: 60 contributors, 2800 stargazers
+- **Slack**: 1300 members
+- **Content**: Hundreds of projects featured on `awesome-aframe` repository and *A Week of A-Frame*
+
 ---
 
-## Ecosystem
+## Third-Party Components
+
+Lorem ipsum
+
+------
+
+## Augmented Reality
+
+------
+
+## Questions?
+
+- [aframe.io](https://aframe.io)
+- [github.com/aframevr/aframe](https://github.com/aframevr/aframe)
+- [aframevr-slack.herokuapp.com](https://aframevr-slack.herokuapp.com)
