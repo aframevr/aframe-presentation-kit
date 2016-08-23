@@ -437,8 +437,10 @@ AFRAME.registerComponent('crazy-position', {
 
 ------
 
-# Questions?
+<!-- .slide: data-background="media/img/scene-collage.jpg" data-state="background-low-opacity" style="background-color: rgba(239, 45, 94, 0.9); color: #EEE" -->
 
-- [aframe.io](https://aframe.io) / [@aframevr](https://twitter.com/aframevr)
-- [github.com/aframevr/aframe](https://github.com/aframevr/aframe)
-- [aframevr-slack.herokuapp.com](https://aframevr-slack.herokuapp.com)
+# Questions?  <!-- .element: style="color: #FFF" -->
+
+- Try it out [aframe.io](https://aframe.io)
+- Join us on Slack [aframevr-slack.herokuapp.com](https://aframevr-slack.herokuapp.com/)
+- Follow us [@aframevr](https://twitter.com/aframevr)
