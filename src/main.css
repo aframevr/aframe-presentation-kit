@@ -14,6 +14,12 @@ body {
   background: radial-gradient(#EFEFEF, #E5E5E5, #DDD);
   background: -moz-radial-gradient(#EFEFEF, #E5E5E5, #DDD);
   background: -webkit-radial-gradient(#EFEFEF, #E5E5E5, #DDD);
+  background-color: #EFEFEF;
+}
+
+html:-webkit-full-screen-ancestor,
+html:-moz-full-screen-ancestor {
+  background: inherit;
 }
 
 .reveal {

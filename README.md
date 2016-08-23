@@ -65,6 +65,8 @@ more](https://github.com/blog/2228-simpler-github-pages-publishing).
 For better performance, it is recommended to serve the slides locally from your
 computer so there aren't constant reflows from downloading images and videos.
 
+Press the `f` key on your keyboard to go full screen.
+
 Press the `s` key on your keyboard to open up the Speakers Notes window.
 
 Press the `<esc>` or `o` key on your keyboard to see a zoomed out overview of
@@ -72,7 +74,7 @@ the slides.
 
 There are some slides with embedded A-Frame scenes. You can play with these
 scenes live from right within the slide. Click-drag to look around. You may
-also enter fullscreen or enter VR with a headset connected, again from right
+also enter full screen or enter VR with a headset connected, again from right
 within the slide.
 
 You may also open up a scene in the A-Frame Inspector by pressing `<ctrl> +
