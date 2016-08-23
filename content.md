@@ -166,11 +166,11 @@ Works across desktop, iOS, Android, Oculus Rift, HTC Vive
 
 # Why A-Frame?
 
-- **Simple** to get started with zero boilerplate
-- **Easy** to understand for web developers and designers
-- **Powerful** to develop with declarative entity-component-system
+- **Simple** &mdash; zero boilerplate
+- **Easy** &mdash; use with languages and tools we know
+- **Powerful** &mdash; declarative entity-component-system
 
----
+------
 
 ## Zero Boilerplate
 
@@ -194,7 +194,7 @@ Works across desktop, iOS, Android, Oculus Rift, HTC Vive
 
 ---
 
-## Zero Boilerplate
+<!-- .slide: data-transition="concave" -->
 
 ```html
 <a-scene></a-scene>
@@ -202,10 +202,10 @@ Works across desktop, iOS, Android, Oculus Rift, HTC Vive
 
 ---
 
-## Zero Boilerplate
+## The Simplest Things Made Simpler
 
 ```js
-// With three.js
+// Box in three.js
 var geometry = new THREE.BoxGeometry(1, 2, 3);
 var material = new THREE.MeshStandardMaterial({color: 'red'});
 var box = new THREE.Mesh(geometry, material);
@@ -215,15 +215,15 @@ scene.add(box);
 
 ---
 
-## Zero Boilerplate
+<!-- .slide: data-transition="concave" -->
 
 ```html
 <a-box color="red" position="10 0 10"></a-box>
 ```
 
----
+------
 
-## Familiar for Web Developers
+## Languages & Tools We Know
 
 - HTML
 - JavaScript and DOM APIs
@@ -238,19 +238,41 @@ scene.appendChild(sphere);
 
 ---
 
-## Familiar for Web Developers
+## Languages & Tools We Know
 
-- d3.js
-- React & Redux
-- vue.js
+<div class="captioned-image-row">
+  <div>
+    <img data-src="media/img/d3.png">
+    <i>d3.js</i>
+  </div>
+  <div>
+    <img data-src="media/img/vue.png">
+    <i>vue.js</i>
+  </div>
+  <div>
+    <img data-src="media/img/react.png">
+    <i>React & Redux</i>
+  </div>
+</div>
 
 ---
 
-## Integrates with 3D Workflows
+## Languages & Tools We Know
 
-- MagicaVoxel
-- Blender
-- Maya
+<div class="captioned-image-row">
+  <div>
+    <img data-src="media/img/magicavoxel.png">
+    <i>MagicaVoxel</i>
+  </div>
+  <div>
+    <img data-src="media/img/blender.png">
+    <i>Blender</i>
+  </div>
+  <div>
+    <img data-src="media/img/maya.png">
+    <i>Maya</i>
+  </div>
+</div>
 
 ------
 
@@ -264,6 +286,8 @@ scene.appendChild(sphere);
 
 ---
 
+<!-- .slide: data-transition="slide-in none" -->
+
 ## Composing an Entity
 
 ```html
@@ -272,6 +296,7 @@ scene.appendChild(sphere);
 
 ---
 
+<!-- .slide: data-transition="none" -->
 
 ## Composing an Entity
 
@@ -281,6 +306,8 @@ scene.appendChild(sphere);
 
 ---
 
+<!-- .slide: data-transition="none" -->
+
 ## Composing an Entity
 
 ```html
@@ -289,6 +316,8 @@ scene.appendChild(sphere);
 ```
 
 ---
+
+<!-- .slide: data-transition="none" -->
 
 ## Composing an Entity
 
@@ -301,6 +330,8 @@ scene.appendChild(sphere);
 ---
 
 ## Composing an Entity
+
+<!-- .slide: data-transition="none" -->
 
 ```html
 <a-entity geometry="primitive: plane; height: 10000; width: 10000"
@@ -332,7 +363,7 @@ AFRAME.registerPrimitive('a-ocean', {
 
 ---
 
-## Writing a Component
+## Structure of a Component
 
 ```js
 AFRAME.registerComponent('position', {
@@ -381,13 +412,15 @@ AFRAME.registerComponent('crazy-position', {
 
 ---
 
-## Third-Party Components
-
-Lorem ipsum
+<!-- .slide: data-background="media/img/standard-components.png" data-background-size="contain" -->
 
 ---
 
-## Pieces from Organizations
+<!-- .slide: data-background="media/img/community-components.png" data-background-size="contain" -->
+
+---
+
+## Scenes by Organizations
 
 - [360syria.com](https://360syria.com) (Amnesty International UK)
 - [apps.npr.org/rockymountain-vr](http://apps.npr.org/rockymountain-vr/)
@@ -405,6 +438,6 @@ Lorem ipsum
 
 # Questions?
 
-- [aframe.io](https://aframe.io)
+- [aframe.io](https://aframe.io) / [@aframevr](https://twitter.com/aframevr)
 - [github.com/aframevr/aframe](https://github.com/aframevr/aframe)
 - [aframevr-slack.herokuapp.com](https://aframevr-slack.herokuapp.com)

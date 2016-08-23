@@ -62,6 +62,9 @@ more](https://github.com/blog/2228-simpler-github-pages-publishing).
 
 ## Presenting
 
+For better performance, it is recommended to serve the slides locally from your
+computer so there aren't constant reflows from downloading images and videos.
+
 Press the `s` key on your keyboard to open up the Speakers Notes window.
 
 There are some slides with embedded A-Frame scenes. You can play with these
