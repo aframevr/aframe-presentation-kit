@@ -10,6 +10,25 @@ Official starter slides for giving talks and presentations about A-Frame.
 2. Start the local server (`npm run start`)
 3. Open `http://localhost:5000` in your browser
 
+## Table of Contents
+
+- Title
+- Virtual Reality
+  - Hardware
+- WebVR
+  - Browser Support
+- A-Frame
+- Why A-Frame?
+  - Removes Boilerplate
+  - Easy for Web Developers
+- Entity-Component-System Framework
+  - Syntax
+  - Building a Component
+- Ecosystem
+  - Components
+  - Scenes
+- Community
+
 ## Modifying Content
 
 The kit uses [reveal.js](https://github.com/hakimel/reveal.js/), an HTML
@@ -19,7 +38,8 @@ present content the way you wish.
 Modify the **CONTENT.md** file to edit content. Slides are written in Markdown
 and separated by six hyphens `------`. You can also add vertical slides by
 separating with three hyphens `---`. The slides are grouped, using vertical
-slides to drill down or build on general points.
+slides to drill down or build on general points. You can add speaker notes
+by putting content under `<!-- Speaker Notes -->` on each slide.
 
 The first place to start would be to update the author, date, and location in
 the title slide.
@@ -40,21 +60,17 @@ at `https://yourusername.github.io/aframe-presentation-kit` or whatever you
 named the repository. [Read
 more](https://github.com/blog/2228-simpler-github-pages-publishing).
 
-## Table of Contents
+## Presenting
 
-- Title
-- Virtual Reality
-  - Hardware
-- WebVR
-  - Browser Support
-- A-Frame
-- Why A-Frame?
-  - Removes Boilerplate
-  - Easy for Web Developers
-- Entity-Component-System Framework
-  - Syntax
-  - Building a Component
-- Ecosystem
-  - Components
-  - Scenes
-- Community
+Press the `s` key on your keyboard to open up the Speakers Notes window.
+
+There are some slides with embedded A-Frame scenes. You can play with these
+scenes live from right within the slide. Click-drag to look around. You may
+also enter fullscreen or enter VR with a headset connected, again from right
+within the slide.
+
+You may also open up a scene in the A-Frame Inspector by pressing `<ctrl> +
+<alt> + i` on your keyboard. This will open up an embedded A-Frame scene in a
+visual tool.
+
+Good luck!
