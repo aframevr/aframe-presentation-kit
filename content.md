@@ -172,7 +172,9 @@ Works across desktop, iOS, Android, Oculus Rift, HTC Vive
 
 ------
 
-## Zero Boilerplate
+## Boilerplate without A-Frame
+
+<!-- .slide: data-background-video="media/video/boilerplate.mp4" data-state="background-low-opacity" data-transition="concave" data-background-transition="none" -->
 
 <div class="slide__boilerplate">
   <p>Import WebVR polyfill</p>
@@ -189,9 +191,6 @@ Works across desktop, iOS, Android, Oculus Rift, HTC Vive
   <p>Deal with metatags and mobile</p>
 </div>
 
-<video data-src="media/video/boilerplate.mp4" data-autoplay loop></video>
-<!-- .element: style="opacity: 0.2" -->
-
 ---
 
 <!-- .slide: data-transition="concave" -->
@@ -203,6 +202,8 @@ Works across desktop, iOS, Android, Oculus Rift, HTC Vive
 ---
 
 ## The Simplest Things Made Simpler
+
+<!-- .slide: data-transition="concave" -->
 
 ```js
 // Box in three.js

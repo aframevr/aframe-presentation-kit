@@ -290,6 +290,11 @@ body {
 /*********************************************
  * ADDED BY KEVIN NGO
  *********************************************/
+.background-low-opacity .backgrounds .stack .present img,
+.background-low-opacity .backgrounds .stack .present video {
+  opacity: 0.15;
+}
+
 .reveal section a {
   color: #24CAFF;
   cursor: pointer;
