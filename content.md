@@ -55,11 +55,10 @@ and industry
 
 <!-- Speaker Notes -->
 
-- App stores and gatekeepers
-- Downloads and installs
-- Proprietary and closed culture
-- Review queues
-- For experts only
+- App stores and gatekeepers control approval and distribution
+- Users have to go through downloads and installs
+- Proprietary technology (Unity, Unreal)
+- Steep learning curve, not friendly for beginners or non-tech people
 
 ------
 
@@ -81,6 +80,12 @@ An open virtual reality platform with the advantages of the Web
     <i>Instant</i>
   </div>
 </div>
+
+<!-- Speaker Notes -->
+
+- Open: anyone can publish, open source tech, standards
+- Connected: traverse/link from world to world, not siloed experiences
+- Instant: click a link and immediately get into an experience, easily sharable via links
 
 ---
 
