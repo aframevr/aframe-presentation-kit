@@ -13,12 +13,11 @@
 Technology that simulates physical presence in interactive and realistic 3D
 environments
 
----
-
-## The Next Platform
-
-Will change the way we work, play, and communicate digitally across every field
-and industry
+<!--Notes
+- Next platform. From PCs -> Smartphones -> VR
+- Change how we work + play + communicate digitally
+- AR/VR advisor Digi-Capital forecasts $120B market by 2020, half Asia
+-->
 
 ---
 
@@ -27,23 +26,23 @@ and industry
 <div class="image-row">
   <div><img data-src="media/img/google-cardboard.png"></div>
   <div><img data-src="media/img/google-daydream.png"></div>
-  <div><img data-src="media/img/oculus-rift.png"></div>
+  <div><img data-src="media/img/samsung-gearvr.png"></div>
 </div>
 
 <div class="image-row">
-  <div><img data-src="media/img/samsung-gearvr.png"></div>
+  <div><img data-src="media/img/oculus-rift.png"></div>
   <div><img data-src="media/img/playstation-vr.png"></div>
   <div><img data-src="media/img/htc-vive.png"></div>
 </div>
 
-<!-- Speaker Notes -->
-
-- **Cardboard**: smartphones in holders; low-quality experiences; accessible
-- **Daydream**: VR-ready Android; 3DoF controller
-- **Rift**: Facebook; the firestarter; waiting for Touch controllers
+<!--Notes
+- **Cardboard**: free, plain smartphones in holders, low-fidelity, rotational tracking only
+- **Daydream**: VR-ready Android smartphones, includes 3DoF controller, rotational only
 - **GearVR**: untethered; decent quality experiences; many already own Samsung phones
-- **Playstation**: cheap; many already own console
-- **Vive**: Steam; most compelling platform
+- **Rift**: $599, Oculus + Facebook, waiting for Touch controllers (~$200), rotational + positional but not complete room scale, outside-in tracking system
+- **Playstation**: $400, many already own console, out in Fall 2016
+- **Vive**: Steam VR, most compelling platform with room scale + tracked controllers + inside-out tracking system
+-->
 
 ---
 
@@ -53,12 +52,12 @@ and industry
 - Downloads and installs
 - Proprietary and closed culture
 
-<!-- Speaker Notes -->
-
+<!--Notes
 - App stores and gatekeepers control approval and distribution
 - Users have to go through downloads and installs
 - Proprietary technology (Unity, Unreal)
 - Steep learning curve, not friendly for beginners or non-tech people
+-->
 
 ------
 
@@ -81,11 +80,11 @@ An open virtual reality platform with the advantages of the Web
   </div>
 </div>
 
-<!-- Speaker Notes -->
-
+<!--Notes
 - Open: anyone can publish, open source tech, standards
 - Connected: traverse/link from world to world, not siloed experiences
 - Instant: click a link and immediately get into an experience, easily sharable via links
+-->
 
 ---
 
@@ -95,6 +94,9 @@ Set of **standard browser APIs** that enable **WebGL rendering to headsets**
 and **access to various VR sensors** for pose and input.
 https://w3c.github.io/webvr/
 
+<!--Notes
+-->
+
 ---
 
 ## Applications
@@ -102,6 +104,9 @@ https://w3c.github.io/webvr/
 - Long tail experiences
 - E-commerce
 - Social media
+
+<!--Notes
+-->
 
 ---
 
@@ -126,6 +131,9 @@ https://w3c.github.io/webvr/
   </div>
 </div>
 
+<!--Notes
+-->
+
 ------
 
 # A-Frame
@@ -142,6 +150,9 @@ A web framework for building virtual reality experiences with HTML
 </a-scene>
 ```
 
+<!--Notes
+-->
+
 ---
 
 ## Hello World
@@ -156,11 +167,38 @@ A web framework for building virtual reality experiences with HTML
   </a-scene>
 </div>
 
+<!--Notes
+-->
+
 ---
 
 ## Hardware
 
 Works across desktop, iOS, Android, Oculus Rift, HTC Vive
+
+<!--Notes
+-->
+
+---
+
+<!-- .slide: data-background-video="media/video/link-traversal.mp4" -->
+
+<!--Notes
+-->
+
+---
+
+<!-- .slide: data-background-video="media/video/roomscale.mp4" -->
+
+<!--Notes
+-->
+
+---
+
+<!-- .slide: data-background-video="media/video/local-multiplayer.mp4" -->
+
+<!--Notes
+-->
 
 ------
 
@@ -169,6 +207,9 @@ Works across desktop, iOS, Android, Oculus Rift, HTC Vive
 - **Simple** &mdash; zero boilerplate
 - **Easy** &mdash; use with languages and tools we know
 - **Powerful** &mdash; declarative entity-component-system
+
+<!--Notes
+-->
 
 ------
 
@@ -191,6 +232,9 @@ Works across desktop, iOS, Android, Oculus Rift, HTC Vive
   <p>Deal with metatags and mobile</p>
 </div>
 
+<!--Notes
+-->
+
 ---
 
 <!-- .slide: data-transition="concave" -->
@@ -198,6 +242,9 @@ Works across desktop, iOS, Android, Oculus Rift, HTC Vive
 ```html
 <a-scene></a-scene>
 ```
+
+<!--Notes
+-->
 
 ---
 
@@ -214,6 +261,9 @@ box.position.set(10, 0, 10);
 scene.add(box);
 ```
 
+<!--Notes
+-->
+
 ---
 
 <!-- .slide: data-transition="concave" -->
@@ -221,6 +271,9 @@ scene.add(box);
 ```html
 <a-box color="red" position="10 0 10"></a-box>
 ```
+
+<!--Notes
+-->
 
 ------
 
@@ -236,6 +289,9 @@ var sphere = document.createElement('a-sphere');
 sphere.setAttribute('radius', 2);
 scene.appendChild(sphere);
 ```
+
+<!--Notes
+-->
 
 ---
 
@@ -256,6 +312,9 @@ scene.appendChild(sphere);
   </div>
 </div>
 
+<!--Notes
+-->
+
 ---
 
 ## Languages & Tools We Know
@@ -275,6 +334,9 @@ scene.appendChild(sphere);
   </div>
 </div>
 
+<!--Notes
+-->
+
 ------
 
 # Entity-Component-System
@@ -284,6 +346,9 @@ scene.appendChild(sphere);
 - Composable, reusable, sharable bits of code
 - All the power of JavaScript, three.js, and WebGL
 - Developers empower other developers
+
+<!--Notes
+-->
 
 ---
 
@@ -295,6 +360,9 @@ scene.appendChild(sphere);
 <a-entity></a-entity>
 ```
 
+<!--Notes
+-->
+
 ---
 
 <!-- .slide: data-transition="none" -->
@@ -304,6 +372,9 @@ scene.appendChild(sphere);
 ```html
 <a-entity geometry="primitive: plane; height: 10000; width: 10000">
 ```
+
+<!--Notes
+-->
 
 ---
 
@@ -315,6 +386,9 @@ scene.appendChild(sphere);
 <a-entity geometry="primitive: plane; height: 10000; width: 10000"
           rotation="-90 0 0">
 ```
+
+<!--Notes
+-->
 
 ---
 
@@ -328,6 +402,9 @@ scene.appendChild(sphere);
           material="shader: standard; opacity: 0.8">
 ```
 
+<!--Notes
+-->
+
 ---
 
 ## Composing an Entity
@@ -340,6 +417,9 @@ scene.appendChild(sphere);
           material="shader: standard; normalTextureRepeat: 50 50; opacity: 0.8"
           ocean-waves="intensity: 0.7">
 ```
+
+<!--Notes
+-->
 
 ---
 
@@ -362,6 +442,9 @@ AFRAME.registerPrimitive('a-ocean', {
 <a-ocean reflection="url(sky.png)" wave-intensity="2"></a-ocean>
 ```
 
+<!--Notes
+-->
+
 ---
 
 ## Structure of a Component
@@ -379,6 +462,9 @@ AFRAME.registerComponent('position', {
   }
 });
 ```
+
+<!--Notes
+-->
 
 ---
 
@@ -403,6 +489,9 @@ AFRAME.registerComponent('crazy-position', {
 <a-sphere crazy-position="min: -1 -1 -1; max: 1 1 1"></a-sphere>
 ```
 
+<!--Notes
+-->
+
 ------
 
 # Community
@@ -411,13 +500,22 @@ AFRAME.registerComponent('crazy-position', {
 - **Slack**: 1300 members
 - **Content**: Hundreds of projects featured on `awesome-aframe` repository and *A Week of A-Frame*
 
+<!--Notes
+-->
+
 ---
 
 <!-- .slide: data-background="media/img/standard-components.png" data-background-size="contain" -->
 
+<!--Notes
+-->
+
 ---
 
 <!-- .slide: data-background="media/img/community-components.png" data-background-size="contain" -->
+
+<!--Notes
+-->
 
 ---
 
@@ -429,11 +527,17 @@ AFRAME.registerComponent('crazy-position', {
 - [washingtonpost.com/graphics/business/mars-journey](https://www.washingtonpost.com/graphics/business/mars-journey/)
 - [shopifyvr.myshopify.com](https://shopifyvr.myshopify.com/)
 
+<!--Notes
+-->
+
 ------
 
 # Augmented Reality
 
 <video class="stretch" data-src="media/video/argon.mp4" data-autoplay loop></video>
+
+<!--Notes
+-->
 
 ------
 
@@ -444,3 +548,6 @@ AFRAME.registerComponent('crazy-position', {
 - Try it out [aframe.io](https://aframe.io)
 - Join us on Slack [aframevr-slack.herokuapp.com](https://aframevr-slack.herokuapp.com/)
 - Follow us [@aframevr](https://twitter.com/aframevr)
+
+<!--Notes
+-->
