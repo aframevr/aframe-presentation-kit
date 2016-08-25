@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Official starter slides for giving talks and presentations about A-Frame.",
   "scripts": {
-    "start": "python -m SimpleHTTPServer 5000"
+    "start": "http-server"
   },
   "repository": {
     "type": "git",
@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/ngokevin/aframe-presentation-kit/issues"
   },
-  "homepage": "https://github.com/ngokevin/aframe-presentation-kit#readme"
+  "homepage": "https://github.com/ngokevin/aframe-presentation-kit#readme",
+  "devDependencies": {
+    "http-server": "^0.9.0"
+  }
 }
