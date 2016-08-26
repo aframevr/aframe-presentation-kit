@@ -8,7 +8,7 @@ Official starter slides for giving talks and presentations about A-Frame.
 
 1. [Download the repository (.ZIP)](https://github.com/ngokevin/aframe-presentation-kit/archive/master.zip)
 2. Start the local server (`npm run start`)
-3. Open `http://localhost:5000` in your browser
+3. Open `http://localhost:8080` in your browser
 
 ## Table of Contents
 
