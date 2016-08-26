@@ -17,6 +17,7 @@ environments
 - Next platform. From PCs -> Smartphones -> VR
 - Change how we work + play + communicate digitally
 - AR/VR advisor Digi-Capital forecasts $120B market by 2020, half Asia
+- Tell your stories about VR (e.g., I hit someone on the head while playing Fruit Ninja)
 -->
 
 ---
@@ -36,27 +37,40 @@ environments
 </div>
 
 <!--Notes
-- **Cardboard**: free, plain smartphones in holders, low-fidelity, rotational tracking only
-- **Daydream**: VR-ready Android smartphones, includes 3DoF controller, rotational only
-- **GearVR**: untethered; decent quality experiences; many already own Samsung phones
-- **Rift**: $599, Oculus + Facebook, waiting for Touch controllers (~$200), rotational + positional but not complete room scale, outside-in tracking system
-- **Playstation**: $400, many already own console, out in Fall 2016
-- **Vive**: Steam VR, most compelling platform with room scale + tracked controllers + inside-out tracking system
+- Range from free to $899
+- Tethered and untethered
+- Powered by smartphone, gaming consoles, and PCs
+- Positional tracking vs. rotational only
+- Controllers (3DoF vs. fully tracked) vs. headset only
+- Inside-out vs. outside-in tracking systems
+- **HTC Vive** currently the most compelling
 -->
 
 ---
 
-## Friction
+## Friction of VR Ecosystems
 
-- App stores and gatekeepers
-- Downloads and installs
-- Proprietary and closed culture
+<div class="captioned-image-row">
+  <div>
+    <img data-src="media/img/gatekeeper.png">
+    <i>Gatekeepers</i>
+  </div>
+  <div>
+    <img data-src="media/img/downloads-installs.png">
+    <i>Installs</i>
+  </div>
+  <div>
+    <img data-src="media/img/closed-door.png">
+    <i>Closed</i>
+  </div>
+</div>
 
 <!--Notes
-- App stores and gatekeepers control approval and distribution
-- Users have to go through downloads and installs
-- Proprietary technology (Unity, Unreal)
-- Steep learning curve, not friendly for beginners or non-tech people
+- Gatekeepers: app stores control approval/distribution, can take down content,
+  single points of failure
+- Installs: users have to go through downloads/installs
+- Closed: proprietary tech (Unity/Unreal), steep learning curve, fragmented
+  causes cross-compat issues, siloed experiences
 -->
 
 ------
@@ -81,31 +95,25 @@ An open virtual reality platform with the advantages of the Web
 </div>
 
 <!--Notes
-- Open: anyone can publish, open source tech, standards
-- Connected: traverse/link from world to world, not siloed experiences
-- Instant: click a link and immediately get into an experience, easily sharable via links
+- Open: anyone can publish, open source, open standards
+- Connected: traverse from world to world, not siloed experiences
+- Instant: click a link, immediately get into an experience, easily sharable via links
 -->
 
 ---
 
 <img class="stretch" data-src="media/img/webvr.png">
 
-Set of **standard browser APIs** that enable **WebGL rendering to headsets**
-and **access to various VR sensors** for pose and input.
+**Standard browser APIs** that enable **WebGL rendering to headsets** and
+**access to VR sensors**.
 https://w3c.github.io/webvr/
 
 <!--Notes
--->
-
----
-
-## Applications
-
-- Long tail experiences
-- E-commerce
-- Social media
-
-<!--Notes
+- Working W3C community group
+- Initial WebVR API by Mozilla (Vlad V.)
+- Mozilla, Google, Samsung, Microsoft, community currently drafting WebVR 1.0 API
+- Optimized rendering path to headsets, 90fps+
+- Access position and rotation (pose) data
 -->
 
 ---
@@ -132,7 +140,24 @@ https://w3c.github.io/webvr/
 </div>
 
 <!--Notes
+- Firefox + Chrome WebVR 1.0 hits release channels by early 2017
+- Firefox Nightly: first WebVR browser
+- Chromium: custom Chromium builds by Brandon Jones
+- Samsung: GearVR browser, with a flag
+- Mobile Polyfill: use device motion/orientation sensors to polyfill on smartphones
 -->
+
+---
+
+## Applications
+
+- Long tail experiences
+- E-commerce
+- Social media
+
+<!--Notes
+-->
+
 
 ------
 
@@ -151,32 +176,72 @@ A web framework for building virtual reality experiences with HTML
 ```
 
 <!--Notes
+- Launched December 2015 by the Mozilla VR team
+- Make it easy for anyone to create VR content
+- Enable web developers
+- Prototype and experiment faster
+- Kickstart WebVR ecosystem
+- Tag names representing objects, customize with attributes
+-->
+
+---
+
+## Supports Anything w/ WebVR
+
+<div class="image-row">
+  <div><img data-src="media/img/google-cardboard.png"></div>
+  <div><img data-src="media/img/samsung-gearvr.png"></div>
+  <div><img data-src="media/img/oculus-rift.png"></div>
+  <div><img data-src="media/img/htc-vive.png"></div>
+</div>
+
+<div class="image-row">
+  <div><img data-src="media/img/firefox-nightly.png"></div>
+  <div><img data-src="media/img/chromium.png"></div>
+  <div><img data-src="media/img/samsung-browser.png"></div>
+  <div><img data-src="media/img/google-cardboard.png"></div>
+</div>
+
+<!--Notes
+- Like the Web, works most everywhere, currently WebVR 1.0 API
+- Even supports HTC Vive + tracked controllers (experimental Gamepad API)
+- Mobile browsers (polyfill), although accessible, have tons of issues
 -->
 
 ---
 
 ## Hello World
 
-<div class="aframe-scene">
-  <a-scene embedded>
-    <a-box color="#4CC3D9" position="-1 0.5 -3" rotation="0 45 0"></a-box>
-    <a-cylinder color="#FFC65D" position="1 0.75 -3" radius="0.5" height="1.5"></a-cylinder>
-    <a-sphere color="#EF2D5E" position="0 1.25 -5" radius="1.25"></a-sphere>
-    <a-plane color="#7BC8A4" rotation="-90 0 0" position="0 0 -4" width="4" height="4"></a-plane>
-    <a-sky color="#ECECEC"></a-sky>
-  </a-scene>
-</div>
+<div data-aframe-scene="scenes/hello-world.html"></div>
 
 <!--Notes
+- It's the web, we can embed VR in HTML slide
+- It's the web, view source in DOM inspector and change values live
+- Click-drag to rotate the camera
+- Can go fullscreen, would go into VR if a headset was connected
+- Can view on mobile if people go to aframe.io
 -->
 
 ---
 
-## Hardware
+## With MagicaVoxel
 
-Works across desktop, iOS, Android, Oculus Rift, HTC Vive
+<img data-src="media/img/magicavoxel.png">
 
 <!--Notes
+- Can create scenes with MagicaVoxel
+- Super easy tool, drop blocks like Minecraft
+- Then export to A-Frame
+-->
+
+---
+
+## With MagicaVoxel
+
+<div data-aframe-scene="scenes/magicavoxel.html"></div>
+
+<!--Notes
+- Open the A-Frame Inspector with `<ctrl> + <alt> + i`
 -->
 
 ---

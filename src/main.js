@@ -1,3 +1,5 @@
+var sceneCache = {};
+
 // https://github.com/hakimel/reveal.js#configuration
 Reveal.initialize({
   history: true,
@@ -28,9 +30,51 @@ function fixWrappedImages () {
   }
 }
 
-// Trigger resize on A-Frame scenes as workaround for sometimes missing.
+/**
+ * Fetch all scenes.
+ */
+function fetchScenes () {
+  var i;
+  var scenes;
+  var src;
+
+  scenes = document.querySelectorAll('[data-aframe-scene]');
+  for (i = 0; i < scenes.length; i++) {
+    // Fetch scene from external file.
+    src = scenes[i].dataset.aframeScene;
+    if (sceneCache[src]) { continue; }
+
+    req = new XMLHttpRequest();
+    sceneCache[src] = new Promise(function (resolve) {
+      req.addEventListener('load', function () {
+        resolve(this.responseText);
+      });
+      req.open('GET', src);
+      req.send();
+    });
+  }
+}
+
+// Initialize A-Frame scenes.
 Reveal.addEventListener('slidechanged', function sceneResize (evt) {
-  var scene = evt.currentSlide.querySelector('a-scene');
-  if (!scene) { return; }
-  scene.resize();
+  var i;
+  var req;
+  var sceneContainer;
+  var scenes;
+  var src;
+
+  sceneContainer = evt.currentSlide.querySelector('[data-aframe-scene]');
+  if (!sceneContainer) { return; }
+
+  // Remove all scenes on slide change to only render one scene at a time.
+  scenes = document.querySelectorAll('a-scene');
+  for (i = 0; i < scenes.length; i++) { scenes[i].parentNode.removeChild(scenes[i]); }
+
+  // Grab scene HTML.
+  fetchScenes();
+  sceneCache[sceneContainer.dataset.aframeScene].then(function (sceneHTML) {
+    setTimeout(function () {
+      sceneContainer.innerHTML = sceneHTML;
+    }, 800);
+  });
 });

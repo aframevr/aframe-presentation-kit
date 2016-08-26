@@ -316,6 +316,7 @@ html:-moz-full-screen-ancestor {
 }
 
 .image-row {
+  align-items: center;
   display: flex;
 }
 
@@ -338,13 +339,15 @@ html:-moz-full-screen-ancestor {
   justify-content: space-between;
 }
 
-.aframe-scene {
+.aframe-scene,
+[data-aframe-scene] {
   margin: 0 auto !important;
   height: 480px;
   width: 100%;
 }
 
-.aframe-scene canvas {
+.aframe-scene canvas,
+[data-aframe-scene] canvas {
   background: #DADADA;
 }
 
