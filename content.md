@@ -1,10 +1,11 @@
-<img class="stretch" data-src="media/img/aframe-logo-rendered.png">
+<!-- .slide: class="slide__title" data-background-video="media/video/aframe-logo.mp4" data-background-video-loop="true" -->
 
-# A-Frame
+<div class="talk-title">
+  <h1>A-Frame</h1>
+  <h2>Building VR on the Web</h2>
+</div>
 
-## Building Blocks for the VR Web
-
-@you / 01 January 2016 / San Francisco, CA
+@you / 01 January 2016 / San Francisco, CA  <!-- .element: class="talk-info" -->
 
 ------
 
@@ -163,17 +164,9 @@ https://w3c.github.io/webvr/
 
 # A-Frame
 
-A web framework for building virtual reality experiences with HTML
+<img class="stretch" data-src="media/img/aframe-logo-rendered.png">
 
-```html
-<a-scene>
-  <a-box color="#4CC3D9" position="-1 0.5 -3" rotation="0 45 0"></a-box>
-  <a-cylinder color="#FFC65D" position="1 0.75 -3" radius="0.5" height="1.5"></a-cylinder>
-  <a-sphere color="#EF2D5E" position="0 1.25 -5" radius="1.25"></a-sphere>
-  <a-plane color="#7BC8A4" rotation="-90 0 0" position="0 0 -4" width="4" height="4"></a-plane>
-  <a-sky color="#ECECEC"></a-sky>
-</a-scene>
-```
+A web framework for building virtual reality experiences with HTML
 
 <!--Notes
 - Launched December 2015 by the Mozilla VR team
@@ -181,7 +174,6 @@ A web framework for building virtual reality experiences with HTML
 - Enable web developers
 - Prototype and experiment faster
 - Kickstart WebVR ecosystem
-- Tag names representing objects, customize with attributes
 -->
 
 ---
@@ -206,6 +198,24 @@ A web framework for building virtual reality experiences with HTML
 - Like the Web, works most everywhere, currently WebVR 1.0 API
 - Even supports HTC Vive + tracked controllers (experimental Gamepad API)
 - Mobile browsers (polyfill), although accessible, have tons of issues
+-->
+
+---
+
+## Hello World
+
+```html
+<a-scene>
+  <a-box color="#4CC3D9" position="-1 0.5 -3" rotation="0 45 0"></a-box>
+  <a-cylinder color="#FFC65D" position="1 0.75 -3" radius="0.5" height="1.5"></a-cylinder>
+  <a-sphere color="#EF2D5E" position="0 1.25 -5" radius="1.25"></a-sphere>
+  <a-plane color="#7BC8A4" rotation="-90 0 0" position="0 0 -4" width="4" height="4"></a-plane>
+  <a-sky color="#ECECEC"></a-sky>
+</a-scene>
+```
+
+<!--Notes
+- Tag names representing objects, customize with attributes
 -->
 
 ---
@@ -246,12 +256,7 @@ A web framework for building virtual reality experiences with HTML
 
 ---
 
-<!-- .slide: data-background-video="media/video/link-traversal.mp4" -->
-
-<!--Notes
--->
-
----
+## Room Scale
 
 <!-- .slide: data-background-video="media/video/roomscale.mp4" -->
 
@@ -259,6 +264,17 @@ A web framework for building virtual reality experiences with HTML
 -->
 
 ---
+
+## Link Traversal
+
+<!-- .slide: data-background-video="media/video/link-traversal.mp4" -->
+
+<!--Notes
+-->
+
+---
+
+## Local Multiplayer
 
 <!-- .slide: data-background-video="media/video/local-multiplayer.mp4" -->
 
@@ -278,9 +294,7 @@ A web framework for building virtual reality experiences with HTML
 
 ------
 
-## Boilerplate without A-Frame
-
-<!-- .slide: data-background-video="media/video/boilerplate.mp4" data-state="background-low-opacity" data-transition="concave" data-background-transition="none" -->
+<!-- .slide: data-background-video="media/video/boilerplate.mp4" -->
 
 <div class="slide__boilerplate">
   <p>Import WebVR polyfill</p>
@@ -298,6 +312,10 @@ A web framework for building virtual reality experiences with HTML
 </div>
 
 <!--Notes
+- WebVR and three.js boilerplate without A-Frame
+- At least a hundred lines of boilerplate per project, can be a drag
+- Boilerplate has to be updated with new versions of WebVR, three.js and browsers
+- A-Frame handles it all with just
 -->
 
 ---
@@ -309,13 +327,11 @@ A web framework for building virtual reality experiences with HTML
 ```
 
 <!--Notes
+- One line of HTML
+- More motivating to experiment and prototype if easier to get started
 -->
 
 ---
-
-## The Simplest Things Made Simpler
-
-<!-- .slide: data-transition="concave" -->
 
 ```js
 // Box in three.js
@@ -327,6 +343,8 @@ scene.add(box);
 ```
 
 <!--Notes
+- Object boilerplate
+- Creating a box in vanilla three.js
 -->
 
 ---
@@ -338,6 +356,9 @@ scene.add(box);
 ```
 
 <!--Notes
+- Creating a box in A-Frame
+- Saves a lot of boilerplate for doing the simplest things
+- Imagine a scene with many objects
 -->
 
 ------
@@ -386,7 +407,7 @@ scene.appendChild(sphere);
 
 <div class="captioned-image-row">
   <div>
-    <img data-src="media/img/magicavoxel.png">
+    <img data-src="media/img/magicavoxel-circle.png">
     <i>MagicaVoxel</i>
   </div>
   <div>
@@ -508,6 +529,8 @@ AFRAME.registerPrimitive('a-ocean', {
 ```
 
 <!--Notes
+- Bake the components into more traditional HTML
+- API to create custom elements with default components and mappings
 -->
 
 ---
@@ -606,7 +629,7 @@ AFRAME.registerComponent('crazy-position', {
 
 ------
 
-<!-- .slide: data-background="media/img/scene-collage.jpg" data-state="background-low-opacity" style="background-color: rgba(239, 45, 94, 0.9); color: #EEE" -->
+<!-- .slide: class="slide__questions" data-background="media/img/scene-collage.jpg" style="background-color: rgba(239, 45, 94, 0.9); color: #EEE" -->
 
 # Questions?  <!-- .element: style="color: #FFF" -->
 

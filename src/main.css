@@ -296,9 +296,11 @@ html:-moz-full-screen-ancestor {
 /*********************************************
  * ADDED BY KEVIN NGO
  *********************************************/
-.background-low-opacity .backgrounds .stack .present img,
-.background-low-opacity .backgrounds .stack .present video {
-  opacity: 0.15;
+[data-background-video] h1,
+[data-background-video] h2,
+[data-background-video] p {
+  color: #FAFAFA;
+  text-shadow: 1px 1px 1px #333;
 }
 
 .reveal section a {
@@ -355,6 +357,33 @@ body:not(.aframe-inspector-opened) .toggle-edit {
   display: none;
 }
 
+.slide__title {
+  height: 100%;
+  width: 100%:
+}
+
+.slide__title h1,
+.slide__title h2,
+.slide__title p {
+  padding: 15px 30px;
+}
+
+.slide__title .talk-title {
+  height: 260px;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.slide__title .talk-info {
+  font-weight: 200;
+  bottom: 40px;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+}
+
 div.slide__boilerplate {
   color: #333;
   display: flex;
@@ -367,16 +396,23 @@ div.slide__boilerplate {
 }
 
 div.slide__boilerplate p {
+  background: #FAFAFA;
+  color: #333;
   font-size: 32px;
-  margin-right: 48px;
   font-weight: 300;
-}
-
-div.slide__boilerplate p:after {
-  content: '\2026';  // &hellip;
+  margin-right: 48px;
+  opacity: 0.8;
+  padding: 4px 15px;
+  text-transform: uppercase;
+  text-shadow: none;
 }
 
 div.slide__boilerplate + video {
   opacity: 0.5;
   z-index: 0;
+}
+
+.slide__questions a {
+  color: #EFEFEF !important;
+  text-decoration: underline;
 }
