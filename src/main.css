@@ -296,6 +296,13 @@ html:-moz-full-screen-ancestor {
 /*********************************************
  * ADDED BY KEVIN NGO
  *********************************************/
+[data-background] h1,
+[data-background] h2,
+[data-background] p {
+  color: #333;
+  text-shadow: 1px 1px 1px #FAFAFA;
+}
+
 [data-background-video] h1,
 [data-background-video] h2,
 [data-background-video] p {

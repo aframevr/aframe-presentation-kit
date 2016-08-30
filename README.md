@@ -24,17 +24,20 @@ Official starter slides for giving talks and presentations about A-Frame.
 - A-Frame
   - Introduction
   - Hello World
-  - Use with JavaScript
-  - Use with Libraries & Frameworks
-  - Use with 3D Tools
+  - Showcases
 - Entity-Component-System
   - Concept
   - Usage
   - Writing a Component
+- Integration
+  - JavaScript
+  - Libraries & Frameworks
+  - 3D Tools
 - Ecosystem
   - Community
   - Components
   - Scenes
+- Conclusion
 
 ## Modifying Content
 
