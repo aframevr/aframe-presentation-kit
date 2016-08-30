@@ -95,7 +95,7 @@ An open virtual reality platform with the advantages of **the Web**
 - Anyone can publish, open source, open standards
 - Traverse from world to world, not siloed experiences
 - Click a link, immediately get into an experience, easily sharable via links,
-  great for long tail bite-sized experiences.
+  great for long tail bite-sized experiences
 
 ---
 
@@ -164,7 +164,7 @@ https://w3c.github.io/webvr/
 - Too difficult to create WebVR experiences
 - Obstacle if doing small prototypes and experiments
 - Boilerplate needs updating with new versions of WebVR, three.js, and
-  handle cross-browser and cross-platform compatibility.
+  handle cross-browser and cross-platform compatibility
 
 ---
 
@@ -206,6 +206,8 @@ scene.add(box);
 - Quickly build scenes without worry
 
 ------
+
+# A-Frame
 
 <img class="stretch" data-src="media/img/aframe-logo-rendered.png">
 
@@ -363,6 +365,8 @@ A web framework for building virtual reality experiences with HTML
 
 <!-- Notes -->
 - Mixins are reusable groups of components, similar to CSS classes
+- Create mixin for box that maps its color to its height
+- `entity-generator` component creates 256 of these bars
 
 ---
 
@@ -385,6 +389,7 @@ A web framework for building virtual reality experiences with HTML
 ```
 
 <!-- Notes -->
+- `layout` component to lay out all the bars in a circle, 10-meter radius
 
 ---
 
@@ -408,6 +413,7 @@ A web framework for building virtual reality experiences with HTML
 ```
 
 <!-- Notes -->
+- Rotate by 180&deg; to face the more dynamic range of the spectrum
 
 ---
 
@@ -491,6 +497,8 @@ AFRAME.registerComponent('crazy-position', {
 
 <!-- Notes -->
 - Component that sets random position on each tick
+- Can be reused and composed with other components for variety of situations
+- Can be shared to other developers
 
 ------
 
@@ -610,6 +618,7 @@ scene.appendChild(sphere);
 - [shopifyvr.myshopify.com](https://shopifyvr.myshopify.com/)
 
 <!-- Notes -->
+- Journalism, e-commerce, and real estate were popular production use cases
 
 ---
 

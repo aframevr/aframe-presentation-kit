@@ -39,56 +39,58 @@ Official starter slides for giving talks and presentations about A-Frame.
   - Scenes
 - Conclusion
 
-## Modifying Content
+## Modifying Design
 
 The kit uses [reveal.js](https://github.com/hakimel/reveal.js/), an HTML
-presentation framework. Read their documentation to see how to style and
-present content the way you wish.
+presentation framework. If you wish to customize, read their documentation to
+see how to configure and style the slide deck.
 
-Modify the **CONTENT.md** file to edit content. Slides are written in Markdown
+For styling, the kit theme is based on the white theme found in the reveal.js
+repository. This has been copied to `src/main.css` which you can replace or
+modify.
+
+## Modifying Content
+
+Modify the **content.md** file to edit content. Slides are written in Markdown
 and separated by six hyphens `------`. You can also add vertical slides by
 separating with three hyphens `---`. The slides are grouped, using vertical
 slides to drill down or build on general points. You can add speaker notes
 by putting content under `<!--Notes` on each slide.
 
-The first place to start would be to update the author, date, and location in
-the title slide.
+Tailor the content to your audience. Filter out slides depending on the answers
+to these questions (as well as the allotted length of your talk). For example:
 
-You should tailor the content to your audience. You may want to filter out
-slides depending on the answers to these questions (as well as the allotted
-length of your talk):
+- **Is your audience familiar with virtual reality?** - If so, you might want to skip or trim the *Virtual Reality* section.
+- **Is your audience interested in underlying code (i.e., JavaScript, A-Frame components, three.js)?** - If not, then trim the *Entity-Component-System* section.
 
-- Is your audience familiar with virtual reality?
-- Is your audience familiar with WebVR?
-- Is your audience interested in underlying code (i.e., JavaScript, A-Frame components, three.js)?
+### Adding A-Frame Scenes
+
+A-Frame scenes are embedded right within the slides so you can demo without
+having to navigate away. The kit will recognize `<div
+data-aframe-scene="scenes/yourscene.html"></div>` and load in the A-Frame
+scene.
 
 ## Deployment
 
 In your GitHub repository settings page under **GitHub Pages** and *Source*,
-select `master branch`. Then simply push to GitHub and your slides will be live
-at `https://yourusername.github.io/aframe-presentation-kit` or whatever you
-named the repository. [Read
-more](https://github.com/blog/2228-simpler-github-pages-publishing).
+select `master branch`. Then simply push to your GitHub repo, and then your
+slides will be live at `https://yourusername.github.io/aframe-presentation-kit`
+or whatever you named the repository. [Read more about GitHub
+Pages](https://github.com/blog/2228-simpler-github-pages-publishing).
 
 ## Presenting
 
-For better performance, it is recommended to serve the slides locally from your
-computer so there aren't constant reflows from downloading images and videos.
+Serve the slides locally from your computer for better network performance.
 
-Press the `f` key on your keyboard to go full screen.
+Press the `f` key on your keyboard to go full screen. Press the `s` key on your
+keyboard to open up the **Speakers Notes** window. Press the `<esc>` or `o` key
+on your keyboard to see a zoomed out overview of the slides.
 
-Press the `s` key on your keyboard to open up the Speakers Notes window.
+There are slides with embedded A-Frame scenes. Play with these scenes live from
+right within the slide. Click and drag to look around. You may enter full
+screen, or if you have a headset connected, enter VR.
 
-Press the `<esc>` or `o` key on your keyboard to see a zoomed out overview of
-the slides.
-
-There are some slides with embedded A-Frame scenes. You can play with these
-scenes live from right within the slide. Click-drag to look around. You may
-also enter full screen or enter VR with a headset connected, again from right
-within the slide.
-
-You may also open up a scene in the A-Frame Inspector by pressing `<ctrl> +
-<alt> + i` on your keyboard. This will open up an embedded A-Frame scene in a
-visual tool.
+Open up a scene in the A-Frame Inspector by pressing `<ctrl> + <alt> + i` on
+your keyboard. This will open up an embedded A-Frame scene in a visual tool.
 
 Check out these [public speaking guide](http://speaking.io/) and good luck!
