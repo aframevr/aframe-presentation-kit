@@ -12,22 +12,29 @@ Official starter slides for giving talks and presentations about A-Frame.
 
 ## Table of Contents
 
-- Title
+- Introduction
 - Virtual Reality
   - Hardware
+  - Friction of VR Ecosystems
 - WebVR
+  - Advantages
+  - API
   - Browser Support
+  - Barrier to Entry
 - A-Frame
-- Why A-Frame?
-  - Removes Boilerplate
-  - Easy for Web Developers
-- Entity-Component-System Framework
-  - Syntax
-  - Building a Component
+  - Introduction
+  - Hello World
+  - Use with JavaScript
+  - Use with Libraries & Frameworks
+  - Use with 3D Tools
+- Entity-Component-System
+  - Concept
+  - Usage
+  - Writing a Component
 - Ecosystem
+  - Community
   - Components
   - Scenes
-- Community
 
 ## Modifying Content
 
@@ -39,7 +46,7 @@ Modify the **CONTENT.md** file to edit content. Slides are written in Markdown
 and separated by six hyphens `------`. You can also add vertical slides by
 separating with three hyphens `---`. The slides are grouped, using vertical
 slides to drill down or build on general points. You can add speaker notes
-by putting content under `<!-- Speaker Notes -->` on each slide.
+by putting content under `<!--Notes` on each slide.
 
 The first place to start would be to update the author, date, and location in
 the title slide.

@@ -9,15 +9,16 @@
 
 ------
 
-# Virtual Reality (VR)
+<!-- .slide: data-background-video="media/video/virtualreality.mp4" data-background-video-loop="true" data-background-video-muted="true" -->
 
-Technology that simulates physical presence in interactive and realistic 3D
-environments
+# Virtual Reality  <!-- .element: class="fragment fade-out" -->
 
 <!--Notes
+- Technology that simulates physical presence in interactive and realistic 3D
+  environments
 - Next platform. From PCs -> Smartphones -> VR
 - Change how we work + play + communicate digitally
-- AR/VR advisor Digi-Capital forecasts $120B market by 2020, half Asia
+- Digi-Capital forecasts $20B VR market by 2020, half Asia
 - Tell your stories about VR (e.g., I hit someone on the head while playing Fruit Ninja)
 -->
 
@@ -67,11 +68,10 @@ environments
 </div>
 
 <!--Notes
-- Gatekeepers: app stores control approval/distribution, can take down content,
-  single points of failure
-- Installs: users have to go through downloads/installs
-- Closed: proprietary tech (Unity/Unreal), steep learning curve, fragmented
-  causes cross-compat issues, siloed experiences
+- App stores control approval/distribution, can take down content, single points of failure
+- Users have to go through downloads/installs
+- Proprietary tech (Unity/Unreal), steep learning curve, fragmentation,
+  cross-compat issues, siloed experiences
 -->
 
 ------
@@ -96,9 +96,10 @@ An open virtual reality platform with the advantages of the Web
 </div>
 
 <!--Notes
-- Open: anyone can publish, open source, open standards
-- Connected: traverse from world to world, not siloed experiences
-- Instant: click a link, immediately get into an experience, easily sharable via links
+- Anyone can publish, open source, open standards
+- Traverse from world to world, not siloed experiences
+- Click a link, immediately get into an experience, easily sharable via links,
+  great for long tail bite-sized experiences.
 -->
 
 ---
@@ -150,150 +151,6 @@ https://w3c.github.io/webvr/
 
 ---
 
-## Applications
-
-- Long tail experiences
-- E-commerce
-- Social media
-
-<!--Notes
--->
-
-
-------
-
-# A-Frame
-
-<img class="stretch" data-src="media/img/aframe-logo-rendered.png">
-
-A web framework for building virtual reality experiences with HTML
-
-<!--Notes
-- Launched December 2015 by the Mozilla VR team
-- Make it easy for anyone to create VR content
-- Enable web developers
-- Prototype and experiment faster
-- Kickstart WebVR ecosystem
--->
-
----
-
-## Supports Anything w/ WebVR
-
-<div class="image-row">
-  <div><img data-src="media/img/google-cardboard.png"></div>
-  <div><img data-src="media/img/samsung-gearvr.png"></div>
-  <div><img data-src="media/img/oculus-rift.png"></div>
-  <div><img data-src="media/img/htc-vive.png"></div>
-</div>
-
-<div class="image-row">
-  <div><img data-src="media/img/firefox-nightly.png"></div>
-  <div><img data-src="media/img/chromium.png"></div>
-  <div><img data-src="media/img/samsung-browser.png"></div>
-  <div><img data-src="media/img/google-cardboard.png"></div>
-</div>
-
-<!--Notes
-- Like the Web, works most everywhere, currently WebVR 1.0 API
-- Even supports HTC Vive + tracked controllers (experimental Gamepad API)
-- Mobile browsers (polyfill), although accessible, have tons of issues
--->
-
----
-
-## Hello World
-
-```html
-<a-scene>
-  <a-box color="#4CC3D9" position="-1 0.5 -3" rotation="0 45 0"></a-box>
-  <a-cylinder color="#FFC65D" position="1 0.75 -3" radius="0.5" height="1.5"></a-cylinder>
-  <a-sphere color="#EF2D5E" position="0 1.25 -5" radius="1.25"></a-sphere>
-  <a-plane color="#7BC8A4" rotation="-90 0 0" position="0 0 -4" width="4" height="4"></a-plane>
-  <a-sky color="#ECECEC"></a-sky>
-</a-scene>
-```
-
-<!--Notes
-- Tag names representing objects, customize with attributes
--->
-
----
-
-## Hello World
-
-<div data-aframe-scene="scenes/hello-world.html"></div>
-
-<!--Notes
-- It's the web, we can embed VR in HTML slide
-- It's the web, view source in DOM inspector and change values live
-- Click-drag to rotate the camera
-- Can go fullscreen, would go into VR if a headset was connected
-- Can view on mobile if people go to aframe.io
--->
-
----
-
-## With MagicaVoxel
-
-<img data-src="media/img/magicavoxel.png">
-
-<!--Notes
-- Can create scenes with MagicaVoxel
-- Super easy tool, drop blocks like Minecraft
-- Then export to A-Frame
--->
-
----
-
-## With MagicaVoxel
-
-<div data-aframe-scene="scenes/magicavoxel.html"></div>
-
-<!--Notes
-- Open the A-Frame Inspector with `<ctrl> + <alt> + i`
--->
-
----
-
-## Room Scale
-
-<!-- .slide: data-background-video="media/video/roomscale.mp4" -->
-
-<!--Notes
--->
-
----
-
-## Link Traversal
-
-<!-- .slide: data-background-video="media/video/link-traversal.mp4" -->
-
-<!--Notes
--->
-
----
-
-## Local Multiplayer
-
-<!-- .slide: data-background-video="media/video/local-multiplayer.mp4" -->
-
-<!--Notes
--->
-
-------
-
-# Why A-Frame?
-
-- **Simple** &mdash; zero boilerplate
-- **Easy** &mdash; use with languages and tools we know
-- **Powerful** &mdash; declarative entity-component-system
-
-<!--Notes
--->
-
-------
-
 <!-- .slide: data-background-video="media/video/boilerplate.mp4" -->
 
 <div class="slide__boilerplate">
@@ -312,10 +169,11 @@ A web framework for building virtual reality experiences with HTML
 </div>
 
 <!--Notes
-- WebVR and three.js boilerplate without A-Frame
-- At least a hundred lines of boilerplate per project, can be a drag
-- Boilerplate has to be updated with new versions of WebVR, three.js and browsers
-- A-Frame handles it all with just
+- Too difficult to create WebVR experiences
+- With three.js, most popular 3D library, over 100 lines of boilerplate per project
+- Obstacle if doing small prototypes and experiments
+- Boilerplate needs updating with new versions of WebVR, three.js, and
+  handle cross-browser and cross-platform compatibility.
 -->
 
 ---
@@ -358,7 +216,65 @@ scene.add(box);
 <!--Notes
 - Creating a box in A-Frame
 - Saves a lot of boilerplate for doing the simplest things
-- Imagine a scene with many objects
+-->
+
+------
+
+# A-Frame
+
+<img class="stretch" data-src="media/img/aframe-logo-rendered.png">
+
+A web framework for building virtual reality experiences with HTML
+
+<!--Notes
+- Launched December 2015 by the Mozilla VR team
+- Make it easy for anyone to create VR content
+- Enable web developers
+- Prototype and experiment faster
+- Kickstart WebVR ecosystem
+-->
+
+---
+
+## Hello World
+
+```html
+<a-scene>
+  <a-box color="#4CC3D9" position="-1 0.5 -3" rotation="0 45 0"></a-box>
+  <a-cylinder color="#FFC65D" position="1 0.75 -3" radius="0.5" height="1.5"></a-cylinder>
+  <a-sphere color="#EF2D5E" position="0 1.25 -5" radius="1.25"></a-sphere>
+  <a-plane color="#7BC8A4" rotation="-90 0 0" position="0 0 -4" width="4" height="4"></a-plane>
+  <a-sky color="#ECECEC"></a-sky>
+</a-scene>
+```
+
+<!--Notes
+- Parseable: HTML arguably most accessible language in computing
+- Declarative: visual representation of scene graph, fully represents state
+- Encapsulated: copy-and-paste HTML anywhere else and still work, no variables
+-->
+
+---
+
+## Hello World
+
+<div data-aframe-scene="scenes/hello-world.html"></div>
+
+<!--Notes
+- Supports desktop, Android, iOS, Samsung Gear VR, Oculus Rift, HTC Vive
+- As web technology, we can embed within slides
+- And view source in DOM inspector and change values live
+- Can go fullscreen, would go into VR if a headset was connected
+- Can view on mobile if people go to aframe.io
+-->
+
+---
+
+## Room Scale
+
+<!-- .slide: data-background-video="media/video/roomscale.mp4" -->
+
+<!--Notes
 -->
 
 ------
@@ -421,6 +337,28 @@ scene.appendChild(sphere);
 </div>
 
 <!--Notes
+-->
+
+---
+
+## With MagicaVoxel
+
+<img data-src="media/img/magicavoxel.png">
+
+<!--Notes
+- Can create scenes with MagicaVoxel
+- Super easy tool, drop blocks like Minecraft
+- Then export to A-Frame
+-->
+
+---
+
+## With MagicaVoxel
+
+<div data-aframe-scene="scenes/magicavoxel.html"></div>
+
+<!--Notes
+- Open the A-Frame Inspector with `<ctrl> + <alt> + i`
 -->
 
 ------
@@ -625,6 +563,9 @@ AFRAME.registerComponent('crazy-position', {
 <video class="stretch" data-src="media/video/argon.mp4" data-autoplay loop></video>
 
 <!--Notes
+- Not just a framework for VR, can also handle 3D and AR as well
+- Prototype by Blair MacIntyre from Georgia Tech with Argon Browser
+- Most predict AR to be even bigger market than VR
 -->
 
 ------
@@ -638,4 +579,7 @@ AFRAME.registerComponent('crazy-position', {
 - Follow us [@aframevr](https://twitter.com/aframevr)
 
 <!--Notes
+- Homepage which has examples, documentation, blog
+- Slack extremely active, core team responsive, over 1300 people
+- Keep up to date by following on Twitter
 -->
