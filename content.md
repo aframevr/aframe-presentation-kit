@@ -1,4 +1,4 @@
-<!-- .slide: class="slide__title" data-background-video="media/video/aframe-logo.mp4" data-background-video-loop="true" -->
+o!-- .slide: class="slide__title" data-background-video="media/video/aframe-logo.mp4" data-background-video-loop="true" -->
 
 <div class="talk-title">
   <h1>A-Frame</h1>
@@ -13,7 +13,7 @@
 
 <!-- .slide: data-autoslide="5000" data-background-video="media/video/virtualreality.mp4" data-background-video-loop="true" data-background-video-muted="true" -->
 
-<!-- Notes -->
+<!-- NOTES -->
 - Technology that simulates physical presence in interactive and realistic 3D
   environments
 - Next platform. From PCs -> Smartphones -> VR
@@ -37,7 +37,7 @@
   <div><img data-src="media/img/htc-vive.png"></div>
 </div>
 
-<!-- Notes -->
+<!-- NOTES -->
 - Free to $899
 - Tethered and untethered
 - Smartphone, gaming consoles, and PCs
@@ -65,7 +65,7 @@
   </div>
 </div>
 
-<!-- Notes -->
+<!-- NOTES -->
 - App stores control approval/distribution, can take down content, single points of failure
 - Users have to go through downloads/installs
 - Proprietary tech (Unity/Unreal), steep learning curve, fragmentation,
@@ -92,7 +92,7 @@ An open virtual reality platform with the advantages of **the Web**
   </div>
 </div>
 
-<!-- Notes -->
+<!-- NOTES -->
 - Anyone can publish, open source, open standards
 - Traverse from world to world, not siloed experiences
 - Click a link, immediately get into an experience, easily sharable via links,
@@ -107,7 +107,7 @@ Standard browser APIs that enable WebGL rendering to headsets and access to VR
 sensors
 https://w3c.github.io/webvr/
 
-<!-- Notes -->
+<!-- NOTES -->
 - Working W3C community group
 - Initial WebVR API by Mozilla (Vlad V.)
 - Mozilla, Google, Samsung, Microsoft, community currently drafting WebVR 1.0 API
@@ -135,13 +135,23 @@ https://w3c.github.io/webvr/
   </div>
 </div>
 
-<!-- Notes -->
+<!-- NOTES -->
 - Browser support
 - Firefox + Chrome WebVR 1.0 hits release channels by early 2017
 - Firefox Nightly: first WebVR browser
 - Chromium: custom Chromium builds by Brandon Jones
 - Samsung: GearVR browser, with a flag
 - Mobile Polyfill: use device motion/orientation sensors to polyfill on smartphones
+
+---
+
+<!-- .slide: data-background-video="media/video/roomscale.mp4" -->
+
+## The Web is Ready for VR
+
+<!-- NOTES -->
+- The Web is capable of VR
+- Walk in a web page, reach out with your hands
 
 ---
 
@@ -168,7 +178,7 @@ https://w3c.github.io/webvr/
   <p>Deal with metatags and mobile</p>
 </div>
 
-<!-- Notes -->
+<!-- NOTES -->
 - Too difficult to create WebVR experiences
 - Obstacle if doing small prototypes and experiments
 - Boilerplate needs updating with new versions of WebVR, three.js, and
@@ -182,7 +192,7 @@ https://w3c.github.io/webvr/
 <a-scene></a-scene>
 ```
 
-<!-- Notes -->
+<!-- NOTES -->
 - "What if we could encapsulate all that boilerplate to just one line of HTML?"
 - Quickly go from idea to prototype without hassle
 
@@ -197,7 +207,7 @@ box.position.set(10, 0, 10);
 scene.add(box);
 ```
 
-<!-- Notes -->
+<!-- NOTES -->
 - Creating the simplest object in vanilla three.js
 - Takes five lines and three variables
 
@@ -209,7 +219,7 @@ scene.add(box);
 <a-box color="red" position="10 0 10"></a-box>
 ```
 
-<!-- Notes -->
+<!-- NOTES -->
 - "What if we could encapsulate objects into a single lines of HTML?"
 - Quickly build scenes without worry
 
@@ -221,7 +231,7 @@ scene.add(box);
 
 A declarative framework for building virtual reality experiences on the Web
 
-<!-- Notes -->
+<!-- NOTES -->
 - A-Frame launched December 2015 by the Mozilla VR team
 - Make it easy for anyone to create VR content
 - Further democratize the dark arts of graphics
@@ -246,7 +256,7 @@ A declarative framework for building virtual reality experiences on the Web
 ```
 <!-- .element: class="stretch" -->
 
-<!-- Notes -->
+<!-- NOTES -->
 - Parsable: HTML arguably most accessible language in computing
 - Declarative: visual representation of scene graph, fully represents state
 - Encapsulated: copy-and-paste HTML anywhere else and still work, no variables
@@ -259,22 +269,12 @@ A declarative framework for building virtual reality experiences on the Web
 
 <div class="stretch" data-aframe-scene="scenes/hello-world.html"></div>
 
-<!-- Notes -->
+<!-- NOTES -->
 - Supports desktop, Android, iOS, Samsung Gear VR, Oculus Rift, HTC Vive
 - As web technology, we can embed within slides
 - And view source in DOM inspector and change values live
 - Can go fullscreen, would go into VR if a headset was connected
 - Can view on mobile if people go to aframe.io
-
----
-
-## Room Scale
-
-<!-- .slide: data-background-video="media/video/roomscale.mp4" -->
-
-<!-- Notes -->
-- Supports HTC Vive
-- Walk around, paint, use your hands
 
 ------
 
@@ -282,7 +282,7 @@ A declarative framework for building virtual reality experiences on the Web
 
 <!-- .slide: data-background="media/img/minecraft-blocks.png" -->
 
-<!-- Notes -->
+<!-- NOTES -->
 - Pattern popular in game development, used in game engines like Unity
 - All objects in scene are **entities** that inherently do nothing. Plug in
   **components** to attach appearance / behavior / functionality
@@ -294,7 +294,7 @@ A declarative framework for building virtual reality experiences on the Web
 
 <!-- .slide: data-background="media/img/entity-component-system.png" data-background-size="contain" -->
 
-<!-- Notes -->
+<!-- NOTES -->
 - Additional analogies: smartphone, vehicle
 
 ---
@@ -308,7 +308,7 @@ A declarative framework for building virtual reality experiences on the Web
 ```
 <!-- .element: class="stretch" -->
 
-<!-- Notes -->
+<!-- NOTES -->
 - A-Frame invented declarative form of entity-component-system using HTML
 - Start with an `<a-entity>`
 - By itself, has no appearance, behavior, functionality
@@ -326,7 +326,7 @@ A declarative framework for building virtual reality experiences on the Web
 ```
 <!-- .element: class="stretch" -->
 
-<!-- Notes -->
+<!-- NOTES -->
 - Attach component via HTML attribute
 - `audio-visualizer` component hooks up with Web Audio API's AnalyserNode, specify audio
 - Component can consist of multiple properties
@@ -346,7 +346,7 @@ A declarative framework for building virtual reality experiences on the Web
 ```
 <!-- .element: class="stretch" -->
 
-<!-- Notes -->
+<!-- NOTES -->
 - `audio-visualizer-scale` component scales children based on frequency data
 - Using data set up by `audio-visualizer`
 - Need to generate children
@@ -365,7 +365,7 @@ A declarative framework for building virtual reality experiences on the Web
 ```
 <!-- .element: class="stretch" -->
 
-<!-- Notes -->
+<!-- NOTES -->
 - `entity-generator` component creates a number of entities, defined by mixins, as children
 - Create 256 bars that will be scaled by `audio-visualizer-scale`
 
@@ -390,7 +390,7 @@ A declarative framework for building virtual reality experiences on the Web
 ```
 <!-- .element: class="stretch" -->
 
-<!-- Notes -->
+<!-- NOTES -->
 - Mixins are reusable groups of components, similar to CSS classes
 - Create mixin for box that maps its color to its height
 - `entity-generator` component creates 256 of these bars
@@ -416,7 +416,7 @@ A declarative framework for building virtual reality experiences on the Web
 ```
 <!-- .element: class="stretch" -->
 
-<!-- Notes -->
+<!-- NOTES -->
 - `layout` component to lay out all the bars in a circle, 10-meter radius
 
 ---
@@ -436,7 +436,7 @@ A declarative framework for building virtual reality experiences on the Web
 <a-udio-spectrum-visualizer src="#rickroll-mp3" num-bars="256" radius="10">
 ```
 
-<!-- Notes -->
+<!-- NOTES -->
 - Use `AFRAME.registerPrimitive` to create prefabs or templates of pre-composed
   configuration of components
 - Define default components and component properties
@@ -465,7 +465,7 @@ AFRAME.registerComponent('position', {
 <a-box position="-1 1 1"></a-box>
 ```
 
-<!-- Notes -->
+<!-- NOTES -->
 - `schema`: defines how data is parsed from HTML
 - Lifecycle methods:
   - `init`: component attached, like `componentDidMount`
@@ -501,7 +501,7 @@ AFRAME.registerComponent('crazy-position', {
 <a-sphere crazy-position="min: -1 -1 -1; max: 1 1 1"></a-sphere>
 ```
 
-<!-- Notes -->
+<!-- NOTES -->
 - Component that sets random position on each tick
 - Can be reused and composed with other components for variety of situations
 - Can be shared to other developers
@@ -526,7 +526,7 @@ scene.appendChild(sphere);
 ```
 <!-- .element: class="stretch" -->
 
-<!-- Notes -->
+<!-- NOTES -->
 - Integrates with web languages and APIs
 - Fully controllable through JavaScript and DOM APIs
 
@@ -547,7 +547,7 @@ scene.appendChild(sphere);
   </div>
 </div>
 
-<!-- Notes -->
+<!-- NOTES -->
 - Based on DOM
 - Can integrate with existing libraries and web frameworks
 
@@ -568,7 +568,7 @@ scene.appendChild(sphere);
   </div>
 </div>
 
-<!-- Notes -->
+<!-- NOTES -->
 - Can be used alongside 3D tools
 - Create models and scenes to place into A-Frame
 
@@ -578,7 +578,7 @@ scene.appendChild(sphere);
 
 <img data-src="media/img/magicavoxel.png">
 
-<!-- Notes -->
+<!-- NOTES -->
 - Can create scenes with MagicaVoxel
 - Super easy tool, drop blocks like Minecraft
 - Then export to A-Frame
@@ -589,7 +589,7 @@ scene.appendChild(sphere);
 
 <div class="stretch" data-aframe-scene="scenes/magicavoxel.html"></div>
 
-<!-- Notes -->
+<!-- NOTES -->
 - MagicaVoxel model in A-Frame, mostly a line of HTML
 - Show off the A-Frame Inspector by pressing `<ctrl> + <alt> + i`
 
@@ -612,7 +612,7 @@ scene.appendChild(sphere);
   </div>
 </div>
 
-<!-- Notes -->
+<!-- NOTES -->
 - Open source and inclusive project
 - Most work done on GitHub
 - Active community on Slack to share projects, interact, hang out, seek help
@@ -622,7 +622,7 @@ scene.appendChild(sphere);
 
 <!-- .slide: data-background="media/img/standard-components.png" data-background-size="contain" -->
 
-<!-- Notes -->
+<!-- NOTES -->
 - Components that ship with A-Frame
 - Bare bones, allow ecosystem to enable features
 
@@ -630,7 +630,7 @@ scene.appendChild(sphere);
 
 <!-- .slide: data-background="media/img/community-components.png" data-background-size="contain" -->
 
-<!-- Notes -->
+<!-- NOTES -->
 - Components built by the community and ecosystem
 - Developers enabling others
 - Components can be consumed without programming knowledge
@@ -645,7 +645,7 @@ Amnesty International UK
 
 [360syria.com](https://360syria.com)
 
-<!-- Notes -->
+<!-- NOTES -->
 - Journalism, e-commerce, and real estate popular production use cases
 
 ---
@@ -678,7 +678,7 @@ iStaging
 
 [vrviewer.istaging.co/#!/684173](http://vrviewer.istaging.co/#!/684173)
 
-<!-- Notes -->
+<!-- NOTES -->
 - Virtual real estate and apartment tours
 
 ---
@@ -687,7 +687,7 @@ iStaging
 
 <video class="stretch" data-src="media/video/argon.mp4" data-autoplay loop></video>
 
-<!-- Notes -->
+<!-- NOTES -->
 - Not just a framework for VR, can also handle 3D and AR as well
 - Prototype by Blair MacIntyre from Georgia Tech with Argon Browser
 - Most predict AR to be even bigger market than VR
@@ -702,7 +702,7 @@ iStaging
 - Join us on Slack [aframevr-slack.herokuapp.com](https://aframevr-slack.herokuapp.com/)
 - Follow us [@aframevr](https://twitter.com/aframevr)
 
-<!-- Notes -->
+<!-- NOTES -->
 - Homepage which has examples, documentation, blog
 - Slack extremely active, core team responsive, over 1300 people
 - Keep up to date by following on Twitter

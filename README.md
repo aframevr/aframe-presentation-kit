@@ -55,7 +55,7 @@ Modify the **content.md** file to edit content. Slides are written in Markdown
 and separated by six hyphens `------`. You can also add vertical slides by
 separating with three hyphens `---`. The slides are grouped, using vertical
 slides to drill down or build on general points. You can add speaker notes
-by putting content under `<!--Notes` on each slide.
+by putting content under `<!-- NOTES -->` on each slide.
 
 Tailor the content to your audience. Filter out slides depending on the answers
 to these questions (as well as the allotted length of your talk). For example:
