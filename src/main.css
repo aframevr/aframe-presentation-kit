@@ -362,7 +362,7 @@ html:-moz-full-screen-ancestor {
 .aframe-scene,
 [data-aframe-scene] {
   margin: 0 auto !important;
-  height: 480px;
+  height: 100%;
   width: 100%;
 }
 

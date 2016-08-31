@@ -233,6 +233,8 @@ A web framework for building virtual reality experiences with HTML
 
 ## Hello World
 
+<!-- .slide: data-transition="slide-in none" -->
+
 ```html
 <a-scene>
   <a-box color="#4CC3D9" position="-1 0.5 -3" rotation="0 45 0"></a-box>
@@ -242,6 +244,7 @@ A web framework for building virtual reality experiences with HTML
   <a-sky color="#ECECEC"></a-sky>
 </a-scene>
 ```
+<!-- .element: class="stretch" -->
 
 <!-- Notes -->
 - Parsable: HTML arguably most accessible language in computing
@@ -252,7 +255,9 @@ A web framework for building virtual reality experiences with HTML
 
 ## Hello World
 
-<div data-aframe-scene="scenes/hello-world.html"></div>
+<!-- .slide: data-transition="none" -->
+
+<div class="stretch" data-aframe-scene="scenes/hello-world.html"></div>
 
 <!-- Notes -->
 - Supports desktop, Android, iOS, Samsung Gear VR, Oculus Rift, HTC Vive
@@ -275,16 +280,22 @@ A web framework for building virtual reality experiences with HTML
 
 # Entity-Component-System
 
-<!-- .slide: class="dark-text" data-background="media/img/entity-component-system.png" data-background-size="contain" -->
+<!-- .slide: data-background="media/img/minecraft-blocks.png" -->
 
 <!-- Notes -->
 - Pattern popular in game development, used in game engines like Unity
 - All objects in scene are **entities** that inherently do nothing. Plug in
   **components** to attach appearance / behavior / functionality
+- Favors composition over inheritance
 - Minecraft analogy: all blocks are entities, mix-and-match components to
   create different kinds of blocks (appearance, physic, behavior, sound, strength)
-- Favors composition over inheritance
-- Grants 100% extensibility, maintain access to JS / three.js / WebGL
+
+---
+
+<!-- .slide: data-background="media/img/entity-component-system.png" data-background-size="contain" -->
+
+<!-- Notes -->
+- Additional analogies: smartphone, vehicle
 
 ---
 
@@ -293,8 +304,9 @@ A web framework for building virtual reality experiences with HTML
 ## Composing an Entity
 
 ```html
-<a-entity></a-entity>
+<a-entity>
 ```
+<!-- .element: class="stretch" -->
 
 <!-- Notes -->
 - A-Frame invented declarative form of entity-component-system using HTML
@@ -312,6 +324,7 @@ A web framework for building virtual reality experiences with HTML
 <a-entity
   audio-visualizer="src: #rickroll-mp3; smoothingTimeConstant: 0.9">
 ```
+<!-- .element: class="stretch" -->
 
 <!-- Notes -->
 - Attach component via HTML attribute
@@ -331,6 +344,7 @@ A web framework for building virtual reality experiences with HTML
   audio-visualizer="src: #rickroll-mp3; smoothingTimeConstant: 0.9"
   audio-visualizer-scale="max: 50; multiplier: 0.06">
 ```
+<!-- .element: class="stretch" -->
 
 <!-- Notes -->
 - `audio-visualizer-scale` component scales children based on frequency data
@@ -349,6 +363,7 @@ A web framework for building virtual reality experiences with HTML
   audio-visualizer-scale="max: 50; multiplier: 0.06"
   entity-generator="mixin: bar; num: 256">
 ```
+<!-- .element: class="stretch" -->
 
 <!-- Notes -->
 - `entity-generator` component creates a number of entities, defined by mixins, as children
@@ -366,13 +381,14 @@ A web framework for building virtual reality experiences with HTML
   audio-visualizer-scale="max: 50; multiplier: 0.06"
   entity-generator="mixin: bar; num: 256">
 
+
 <a-mixin
   id="bar"
   geometry="primitive: box"
   material="color: black"
   color-via-scale-y="from: 10 60 10; to: 180 255 180; maxScale: 15">
-
 ```
+<!-- .element: class="stretch" -->
 
 <!-- Notes -->
 - Mixins are reusable groups of components, similar to CSS classes
@@ -398,33 +414,10 @@ A web framework for building virtual reality experiences with HTML
   material="color: black"
   color-via-scale-y="from: 10 60 10; to: 180 255 180; maxScale: 15">
 ```
+<!-- .element: class="stretch" -->
 
 <!-- Notes -->
 - `layout` component to lay out all the bars in a circle, 10-meter radius
-
----
-
-## Composing an Entity
-
-<!-- .slide: data-transition="none" -->
-
-```html
-<a-entity
-  audio-visualizer="src: #rickroll-mp3; smoothingTimeConstant: 0.9"
-  audio-visualizer-scale="max: 50; multiplier: 0.06"
-  entity-generator="mixin: bar; num: 256"
-  layout="type: circle; radius: 10"
-  rotation="0 180 0">
-
-<a-mixin
-  id="bar"
-  geometry="primitive: box"
-  material="color: black"
-  color-via-scale-y="from: 10 60 10; to: 180 255 180; maxScale: 15">
-```
-
-<!-- Notes -->
-- Rotate by 180&deg; to face the more dynamic range of the spectrum
 
 ---
 
@@ -435,12 +428,12 @@ A web framework for building virtual reality experiences with HTML
   audio-visualizer="src: #rickroll-mp3; smoothingTimeConstant: 0.9"
   audio-visualizer-scale="max: 50; multiplier: 0.06"
   entity-generator="mixin: bar; num: 256"
-  layout="type: circle; radius: 10"
-  rotation="0 180 0">
+  layout="type: circle; radius: 10">
 ```
+<!-- .element: class="stretch" -->
 
 ```html
-<a-audio-spectrum-visualizer src="#rickroll-mp3" num-bars="256" radius="10">
+<a-udio-spectrum-visualizer src="#rickroll-mp3" num-bars="256" radius="10">
 ```
 
 <!-- Notes -->
@@ -466,6 +459,7 @@ AFRAME.registerComponent('position', {
   }
 });
 ```
+<!-- .element: class="stretch" -->
 
 ```html
 <a-box position="-1 1 1"></a-box>
@@ -501,6 +495,7 @@ AFRAME.registerComponent('crazy-position', {
   }
 });
 ```
+<!-- .element: class="stretch" -->
 
 ```html
 <a-sphere crazy-position="min: -1 -1 -1; max: 1 1 1"></a-sphere>
@@ -510,20 +505,26 @@ AFRAME.registerComponent('crazy-position', {
 - Component that sets random position on each tick
 - Can be reused and composed with other components for variety of situations
 - Can be shared to other developers
+- Grants 100% extensibility, maintain access to JS / three.js / WebGL
 
 ------
 
 # Integration
 
 ```js
-var scene = document.querySelector('a-scene');
-var sphere = document.createElement('a-sphere');
+const scene = document.querySelector('a-scene');
+
+const sphere = document.createElement('a-sphere');
+
 sphere.setAttribute('radius', 2);
+
 sphere.addEventListener('click', function () {
   this.setAttribute('color', 'red');
 });
+
 scene.appendChild(sphere);
 ```
+<!-- .element: class="stretch" -->
 
 <!-- Notes -->
 - Integrates with web languages and APIs
@@ -586,7 +587,7 @@ scene.appendChild(sphere);
 
 ## With MagicaVoxel
 
-<div data-aframe-scene="scenes/magicavoxel.html"></div>
+<div class="stretch" data-aframe-scene="scenes/magicavoxel.html"></div>
 
 <!-- Notes -->
 - MagicaVoxel model in A-Frame, mostly a line of HTML
