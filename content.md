@@ -219,7 +219,7 @@ scene.add(box);
 
 <!-- .slide: data-background="media/img/aframe-rendered-full.png" -->
 
-A web framework for building virtual reality experiences with HTML
+A declarative framework for building virtual reality experiences on the Web
 
 <!-- Notes -->
 - A-Frame launched December 2015 by the Mozilla VR team
@@ -240,7 +240,7 @@ A web framework for building virtual reality experiences with HTML
   <a-box color="#4CC3D9" position="-1 0.5 -3" rotation="0 45 0"></a-box>
   <a-cylinder color="#FFC65D" position="1 0.75 -3" radius="0.5" height="1.5"></a-cylinder>
   <a-sphere color="#EF2D5E" position="0 1.25 -5" radius="1.25"></a-sphere>
-  <a-plane color="#7BC8A4" rotation="-90 0 0" position="0 0 -4" width="4" height="4"></a-plane>
+  <a-plane color="#7BC8A4" position="0 0 -4" rotation="-90 0 0" width="4" height="4"></a-plane>
   <a-sky color="#ECECEC"></a-sky>
 </a-scene>
 ```
