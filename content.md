@@ -9,9 +9,9 @@
 
 ------
 
-<!-- .slide: data-background-video="media/video/virtualreality.mp4" data-background-video-loop="true" data-background-video-muted="true" -->
+<!-- .slide: data-autoslide="5000" data-background-video="media/video/virtualreality.mp4" data-background-video-loop="true" data-background-video-muted="true" -->
 
-# Virtual Reality  <!-- .element: class="fragment fade-out" -->
+# Virtual Reality  <!-- .element: data-autoslide="0" class="fragment fade-out" -->
 
 <!-- Notes -->
 - Technology that simulates physical presence in interactive and realistic 3D
@@ -22,6 +22,8 @@
 - Tell your stories about VR (e.g., I hit someone on the head while playing Fruit Ninja)
 
 ---
+
+## Hardware
 
 <div class="image-row">
   <div><img data-src="media/img/google-cardboard.png"></div>
@@ -36,7 +38,6 @@
 </div>
 
 <!-- Notes -->
-- Current VR hardware
 - Free to $899
 - Tethered and untethered
 - Smartphone, gaming consoles, and PCs
@@ -143,6 +144,12 @@ https://w3c.github.io/webvr/
 
 ---
 
+<!-- .slide: data-background="media/img/metaverse.png" -->
+
+## Metaverse
+
+---
+
 <!-- .slide: data-background-video="media/video/boilerplate.mp4" -->
 
 <div class="slide__boilerplate">
@@ -207,9 +214,9 @@ scene.add(box);
 
 ------
 
-# A-Frame
+<!-- .slide: data-background="media/img/aframe-rendered-full.png" -->
 
-<img class="stretch" data-src="media/img/aframe-logo-rendered.png">
+# A-Frame
 
 A web framework for building virtual reality experiences with HTML
 
@@ -267,7 +274,7 @@ A web framework for building virtual reality experiences with HTML
 
 # Entity-Component-System
 
-<!-- .slide: data-background="media/img/entity-component-system.png" data-background-size="contain" -->
+<!-- .slide: class="dark-text" data-background="media/img/entity-component-system.png" data-background-size="contain" -->
 
 <!-- Notes -->
 - Pattern popular in game development, used in game engines like Unity
@@ -584,9 +591,20 @@ scene.appendChild(sphere);
 
 # Ecosystem
 
-- **Github**: 60 contributors, 2800 stargazers
-- **Slack**: 1300 members
-- **Content**: Hundreds of projects featured on `awesome-aframe` repository and *A Week of A-Frame*
+<div class="captioned-image-row">
+  <div>
+    <img data-src="media/img/github.png">
+    <i>60 contributors, 3000 Stargazers</i>
+  </div>
+  <div>
+    <img data-src="media/img/slack.png">
+    <i>1400 members on Slack</i>
+  </div>
+  <div>
+    <img data-src="media/img/scene-collage-circle.png">
+    <i>100s of featured projects</i>
+  </div>
+</div>
 
 <!-- Notes -->
 
@@ -633,7 +651,7 @@ scene.appendChild(sphere);
 
 ------
 
-<!-- .slide: class="slide__questions" data-background="media/img/scene-collage.jpg" style="background-color: rgba(239, 45, 94, 0.9); color: #EEE" -->
+<!-- .slide: class="slide__questions" data-background="media/img/scene-collage.jpg" style="background-color: rgba(30, 30, 30, 0.3)" -->
 
 # Questions?  <!-- .element: style="color: #FFF" -->
 

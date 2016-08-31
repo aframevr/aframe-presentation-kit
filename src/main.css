@@ -11,10 +11,10 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: radial-gradient(#EFEFEF, #E5E5E5, #DDD);
-  background: -moz-radial-gradient(#EFEFEF, #E5E5E5, #DDD);
-  background: -webkit-radial-gradient(#EFEFEF, #E5E5E5, #DDD);
-  background-color: #EFEFEF;
+  background: radial-gradient(#FAFAFA, #EAEAEA, #E5E5E5);
+  background: -moz-radial-gradient(#FAFAFA, #EAEAEA, #E5E5E5);
+  background: -webkit-radial-gradient(#FAFAFA, #EAEAEA, #E5E5E5);
+  background-color: #E5E5E5;
 }
 
 html:-webkit-full-screen-ancestor,
@@ -296,18 +296,29 @@ html:-moz-full-screen-ancestor {
 /*********************************************
  * ADDED BY KEVIN NGO
  *********************************************/
+
 [data-background] h1,
 [data-background] h2,
-[data-background] p {
-  color: #333;
-  text-shadow: 1px 1px 1px #FAFAFA;
-}
-
+[data-background] li,
+[data-background] p,
 [data-background-video] h1,
 [data-background-video] h2,
+[data-background-video] li,
 [data-background-video] p {
   color: #FAFAFA;
-  text-shadow: 1px 1px 1px #333;
+  text-shadow: 1px 1px 2px #333;
+}
+
+[data-background].dark-text h1,
+[data-background].dark-text h2,
+[data-background].dark-text li,
+[data-background].dark-text p,
+[data-background-video].dark-text h1,
+[data-background-video].dark-text h2,
+[data-background-video].dark-text li,
+[data-background-video].dark-text p {
+  color: #333;
+  text-shadow: 1px 1px 2px #FAFAFA;
 }
 
 .reveal section a {
@@ -417,9 +428,4 @@ div.slide__boilerplate p {
 div.slide__boilerplate + video {
   opacity: 0.5;
   z-index: 0;
-}
-
-.slide__questions a {
-  color: #EFEFEF !important;
-  text-decoration: underline;
 }
