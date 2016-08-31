@@ -5,7 +5,7 @@
   <h2>Building VR on the Web</h2>
 </div>
 
-@you / 01 January 2016 / San Francisco, CA  <!-- .element: class="talk-info" -->
+@you / 01 January 2016 / San Francisco, CA aframe.io <!-- .element: class="talk-info" -->
 
 ------
 
@@ -97,6 +97,7 @@ An open virtual reality platform with the advantages of **the Web**
 - Traverse from world to world, not siloed experiences
 - Click a link, immediately get into an experience, easily sharable via links,
   great for long tail bite-sized experiences
+- Can't wait for the platform to bake and crystallize for years before Web gets involved
 
 ---
 
@@ -522,6 +523,7 @@ scene.appendChild(sphere);
 ```
 
 <!-- Notes -->
+- Integrates with web languages and APIs
 - Fully controllable through JavaScript and DOM APIs
 
 ---
@@ -543,7 +545,7 @@ scene.appendChild(sphere);
 
 <!-- Notes -->
 - Based on DOM
-- Interoperates with existing libraries and frameworks
+- Can integrate with existing libraries and web frameworks
 
 ---
 
@@ -563,7 +565,7 @@ scene.appendChild(sphere);
 </div>
 
 <!-- Notes -->
-- Works together with 3D tools
+- Can be used alongside 3D tools
 - Create models and scenes to place into A-Frame
 
 ---
@@ -607,6 +609,10 @@ scene.appendChild(sphere);
 </div>
 
 <!-- Notes -->
+- Open source and inclusive project
+- Most work done on GitHub
+- Active community on Slack to share projects, interact, hang out, seek help
+- Featured projects on the `awesome-aframe` repository and *A Week of A-Frame* blog
 
 ---
 
@@ -627,16 +633,49 @@ scene.appendChild(sphere);
 
 ---
 
-## Scenes by Organizations
+<!-- .slide: data-background="media/img/360syria.jpg" -->
 
-- [360syria.com](https://360syria.com) (Amnesty International UK)
-- [apps.npr.org/rockymountain-vr](http://apps.npr.org/rockymountain-vr/)
-- [gurivr.com](https://gurivr.com/) (The Coral Project)
-- [washingtonpost.com/graphics/business/mars-journey](https://www.washingtonpost.com/graphics/business/mars-journey/)
-- [shopifyvr.myshopify.com](https://shopifyvr.myshopify.com/)
+## Fear of the Sky
+
+Amnesty International UK
+
+[360syria.com](https://360syria.com)
 
 <!-- Notes -->
-- Journalism, e-commerce, and real estate were popular production use cases
+- Journalism, e-commerce, and real estate popular production use cases
+
+---
+
+## Stand at the Edge of Geologic Time
+
+<!-- .slide: data-background="media/img/npr.png" -->
+
+National Public Radio (NPR)
+
+[apps.npr.org/rockymountain-vr](http://apps.npr.org/rockymountain-vr/)
+
+---
+
+<!-- .slide: data-background="media/img/mars.jpg" -->
+
+## Journey to Mars
+
+The Washington Post
+
+[washingtonpost.com/video/mars/public/](https://www.washingtonpost.com/video/mars/public/)
+
+---
+
+<!-- .slide: data-background-video="media/video/livetour.mp4" data-background-video-loop="true" -->
+
+## LiveTour
+
+iStaging
+
+[vrviewer.istaging.co/#!/684173](http://vrviewer.istaging.co/#!/684173)
+
+<!-- Notes -->
+- Virtual real estate and apartment tours
 
 ---
 

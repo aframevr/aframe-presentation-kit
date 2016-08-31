@@ -218,12 +218,12 @@ html:-moz-full-screen-ancestor {
   text-decoration: none;
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
-  transition: color .15s ease; }
+  transition: color .15s ease;
+}
 
 .reveal a:hover {
-  color: #6ca0e8;
-  text-shadow: none;
-  border: none; }
+  color: #24CAFF !important;
+}
 
 .reveal .roll span:after {
   color: #fff;
