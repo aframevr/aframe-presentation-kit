@@ -1,11 +1,11 @@
-o!-- .slide: class="slide__title" data-background-video="media/video/aframe-logo.mp4" data-background-video-loop="true" -->
+<!-- .slide: class="slide__title" data-background-video="media/video/aframe-logo.mp4" data-background-video-loop="true" -->
 
 <div class="talk-title">
   <h1>A-Frame</h1>
   <h2>Building VR on the Web</h2>
 </div>
 
-@you / 01 January 2016 / San Francisco, CA aframe.io <!-- .element: class="talk-info" -->
+@you / 01 January 2016 / San Francisco, CA aframe.io  <!-- .element: class="talk-info" -->
 
 ------
 
@@ -421,6 +421,12 @@ A declarative framework for building virtual reality experiences on the Web
 
 ---
 
+## Composing an Entity
+
+<div class="stretch" data-aframe-scene="scenes/audio-visualizer.html"></div>
+
+---
+
 ## Baking an Entity
 
 ```html
@@ -643,7 +649,7 @@ scene.appendChild(sphere);
 
 Amnesty International UK
 
-[360syria.com](https://360syria.com)
+[360syria.com](http://360syria.com)
 
 <!-- NOTES -->
 - Journalism, e-commerce, and real estate popular production use cases

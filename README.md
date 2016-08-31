@@ -20,14 +20,16 @@ Official starter slides for giving talks and presentations about A-Frame.
   - Advantages
   - API
   - Browser Support
+  - The Web is Ready for VR
+  - Metaverse
   - Barrier to Entry
 - A-Frame
   - Introduction
   - Hello World
-  - Showcases
+  - Primitives
 - Entity-Component-System
   - Concept
-  - Usage
+  - Composing an Entity
   - Writing a Component
 - Integration
   - JavaScript
