@@ -9,9 +9,9 @@
 
 ------
 
-<!-- .slide: data-autoslide="5000" data-background-video="media/video/virtualreality.mp4" data-background-video-loop="true" data-background-video-muted="true" -->
-
 # Virtual Reality  <!-- .element: data-autoslide="0" class="fragment fade-out" -->
+
+<!-- .slide: data-autoslide="5000" data-background-video="media/video/virtualreality.mp4" data-background-video-loop="true" data-background-video-muted="true" -->
 
 <!-- Notes -->
 - Technology that simulates physical presence in interactive and realistic 3D
@@ -145,9 +145,9 @@ https://w3c.github.io/webvr/
 
 ---
 
-<!-- .slide: data-background="media/img/metaverse.png" -->
-
 ## Metaverse
+
+<!-- .slide: data-background="media/img/metaverse.png" -->
 
 ---
 
@@ -215,9 +215,9 @@ scene.add(box);
 
 ------
 
-<!-- .slide: data-background="media/img/aframe-rendered-full.png" -->
-
 # A-Frame
+
+<!-- .slide: data-background="media/img/aframe-rendered-full.png" -->
 
 A web framework for building virtual reality experiences with HTML
 
@@ -304,9 +304,9 @@ A web framework for building virtual reality experiences with HTML
 
 ---
 
-<!-- .slide: data-transition="none" -->
-
 ## Composing an Entity
+
+<!-- .slide: data-transition="none" -->
 
 ```html
 <a-entity
@@ -322,9 +322,9 @@ A web framework for building virtual reality experiences with HTML
 
 ---
 
-<!-- .slide: data-transition="none" -->
-
 ## Composing an Entity
+
+<!-- .slide: data-transition="none" -->
 
 ```html
 <a-entity
@@ -339,9 +339,9 @@ A web framework for building virtual reality experiences with HTML
 
 ---
 
-<!-- .slide: data-transition="none" -->
-
 ## Composing an Entity
+
+<!-- .slide: data-transition="none" -->
 
 ```html
 <a-entity
@@ -358,17 +358,20 @@ A web framework for building virtual reality experiences with HTML
 
 ## Composing an Entity
 
+<!-- .slide: data-transition="none" -->
+
 ```html
+<a-entity
+  audio-visualizer="src: #rickroll-mp3; smoothingTimeConstant: 0.9"
+  audio-visualizer-scale="max: 50; multiplier: 0.06"
+  entity-generator="mixin: bar; num: 256">
+
 <a-mixin
   id="bar"
   geometry="primitive: box"
   material="color: black"
   color-via-scale-y="from: 10 60 10; to: 180 255 180; maxScale: 15">
 
-<a-entity
-  audio-visualizer="src: #rickroll-mp3; smoothingTimeConstant: 0.9"
-  audio-visualizer-scale="max: 50; multiplier: 0.06"
-  entity-generator="mixin: bar; num: 256">
 ```
 
 <!-- Notes -->
@@ -383,17 +386,17 @@ A web framework for building virtual reality experiences with HTML
 <!-- .slide: data-transition="none" -->
 
 ```html
-<a-mixin
-  id="bar"
-  geometry="primitive: box"
-  material="color: black"
-  color-via-scale-y="from: 10 60 10; to: 180 255 180; maxScale: 15">
-
 <a-entity
   audio-visualizer="src: #rickroll-mp3; smoothingTimeConstant: 0.9"
   audio-visualizer-scale="max: 50; multiplier: 0.06"
   entity-generator="mixin: bar; num: 256"
   layout="type: circle; radius: 10">
+
+<a-mixin
+  id="bar"
+  geometry="primitive: box"
+  material="color: black"
+  color-via-scale-y="from: 10 60 10; to: 180 255 180; maxScale: 15">
 ```
 
 <!-- Notes -->
@@ -406,18 +409,18 @@ A web framework for building virtual reality experiences with HTML
 <!-- .slide: data-transition="none" -->
 
 ```html
-<a-mixin
-  id="bar"
-  geometry="primitive: box"
-  material="color: black"
-  color-via-scale-y="from: 10 60 10; to: 180 255 180; maxScale: 15">
-
 <a-entity
   audio-visualizer="src: #rickroll-mp3; smoothingTimeConstant: 0.9"
   audio-visualizer-scale="max: 50; multiplier: 0.06"
   entity-generator="mixin: bar; num: 256"
   layout="type: circle; radius: 10"
   rotation="0 180 0">
+
+<a-mixin
+  id="bar"
+  geometry="primitive: box"
+  material="color: black"
+  color-via-scale-y="from: 10 60 10; to: 180 255 180; maxScale: 15">
 ```
 
 <!-- Notes -->
@@ -425,7 +428,7 @@ A web framework for building virtual reality experiences with HTML
 
 ---
 
-## Baking the Entity
+## Baking an Entity
 
 ```html
 <a-entity
@@ -448,13 +451,11 @@ A web framework for building virtual reality experiences with HTML
 
 ---
 
-## Structure of a Component
+## Basic Component
 
 ```js
 AFRAME.registerComponent('position', {
   schema: {type: 'vec3'},
-
-  // init: function () { },
 
   update: function () {
     var el = this.el;
@@ -462,23 +463,25 @@ AFRAME.registerComponent('position', {
     var object3D = el.object3D;
 
     object3D.position.set(data.x, data.y, data.z);
-  },
-
-  // remove: function () { },
-
-  // tick: function (t, dt) { }
+  }
 });
+```
+
+```html
+<a-box position="-1 1 1"></a-box>
 ```
 
 <!-- Notes -->
 - `schema`: defines how data is parsed from HTML
-- `init`: run on component attached, similar to `componentDidMount`
-- `update`: run on component data update, similar to `componentWillReceiveProps`
-- `remove`: run on component detached, similar to `componentWillUnmount`
-- `tick`: run on every frame, continuous
-- `el`: reference to entity element
-- `data`: component data parsed from HTML
-- `object3D`: three.js object
+- Lifecycle methods:
+  - `init`: component attached, like `componentDidMount`
+  - `update`: component data update, like `componentWillReceiveProps`
+  - `remove`: component detached, like `componentWillUnmount`
+  - `tick`: run on every frame
+- Properties:
+  - `el`: reference to entity element
+  - `data`: component data parsed from HTML
+  - `object3D`: three.js object
 
 ---
 
