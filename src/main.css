@@ -296,6 +296,17 @@ html:-moz-full-screen-ancestor {
 /*********************************************
  * ADDED BY KEVIN NGO
  *********************************************/
+.state--bg-dark body {
+  background: #111;
+}
+
+.state--bg-blue body {
+  background: #30D8FC;
+}
+
+.state--bg-white body {
+  background: #FFF;
+}
 
 [data-background] h1,
 [data-background] h2,
