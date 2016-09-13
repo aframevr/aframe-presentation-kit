@@ -1,0 +1,20 @@
+<a-scene embedded inspector="src/vendor/js/aframe-inspector.min.js">
+  <a-entity calendar-heatmap="json: media/data/githubStargazersPerDay.json"
+            animation="startEvents: calendar-heatmap-generated; dur: 2000;
+                       easing: easeInOutElastic; property: rotation; to: 30 0 0"
+            animation__hover="easing: easeInOutQuad; property: position; dir: alternate;
+                              dur: 2000; loop: true; to: -2.5 1.7 -2.5"
+            position="-2.5 1.8 -2.5">
+    <a-entity bmfont-text="text: GitHub Stars Per Day; color: #DADADA; fnt: src/vendor/fonts/DejaVu/DejaVu-sdf.fnt; fntImage: src/vendor/fonts/DejaVu/DejaVu-sdf.png"
+              position="0 0.2 0"></a-entity>
+  </a-entity>
+
+  <a-sky color="#394359"></a-sky>
+  <a-circle rotation="-90 0 0" color="#303242" radius="50" shader="flat"></a-circle>
+
+  <a-light position="-1 1 1"></a-light>
+  <a-light position="-1 -1 1" intensity="0.75"></a-light>
+  <a-light type="ambient" color="#999"></a-light>
+
+  <a-entity camera="userHeight: 1.8" look-controls></a-entity>
+</a-scene>

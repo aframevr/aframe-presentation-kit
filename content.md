@@ -3,27 +3,37 @@
 <div class="talk-title">
   <h1>A-Frame</h1>
   <h2>Building VR on the Web</h2>
+  <p class="talk-info">
+    @you | mozvr.com | aframe.io
+  </p>
 </div>
 
-@you / 01 January 2016 / San Francisco, CA aframe.io  <!-- .element: class="talk-info" -->
+<!-- NOTES -->
+- Introduce yourself
+- Goal: bring high-performance VR to the Web, creating an open/connected VR platform
+- WebVR, why we need VR on the Web, and how to build WebVR experiences
 
 ------
 
-# Virtual Reality  <!-- .element: data-autoslide="0" class="fragment fade-out" -->
+# Virtual Reality
 
-<!-- .slide: data-autoslide="5000" data-background-video="media/video/virtualreality.mp4" data-background-video-loop="true" data-background-video-muted="true" data-state="state--bg-dark" -->
+<!-- .slide: data-background-video="media/video/virtualreality.mp4" data-background-video-loop="true" data-state="state--bg-dark" -->
 
 <!-- NOTES -->
-- Technology that simulates physical presence in interactive and realistic 3D
-  environments
-- Next platform. From PCs -> Smartphones -> VR
-- Change how we work + play + communicate digitally
-- Digi-Capital forecasts $20B VR market by 2020, half Asia
-- Tell your stories about VR (e.g., I hit someone on the head while playing Fruit Ninja)
+- Ask how many have tried VR.
+- Virtual reality is a technology platform that transports you to realistic, interactive, immersive 3D environments
+- It's the next platform, will change how we work + play + communicate digitally, face of society
 
 ---
 
-## Hardware
+# Fun!
+
+<!-- .slide: data-background="media/img/vrshooting.jpg" data-state="state--bg-dark" -->
+
+<!-- NOTES -->
+- Tell interested stories about your experiences with VR.
+
+---
 
 <div class="image-row">
   <div><img data-src="media/img/google-cardboard.png"></div>
@@ -38,13 +48,10 @@
 </div>
 
 <!-- NOTES -->
-- Free to $899
-- Tethered and untethered
-- Smartphone, gaming consoles, and PCs
-- Positional tracking vs. rotational only
-- Controllers (3DoF vs. fully tracked) vs. headset only
-- Inside-out vs. outside-in tracking systems
-- **HTC Vive** currently the most compelling
+- Backed by the largest corporations in the world, everyone wants in
+- Range from cheap to expensive, tethered and untethered, controllers, tracking
+- HTC Vive with Steam currently offers the most compelling experiences, but never know
+- See a lot of different devices, systems, platforms competing against each other...
 
 ---
 
@@ -66,10 +73,10 @@
 </div>
 
 <!-- NOTES -->
-- App stores control approval/distribution, can take down content, single points of failure
-- Users have to go through downloads/installs
-- Proprietary tech (Unity/Unreal), steep learning curve, fragmentation,
-  cross-compat issues, siloed experiences
+- App stores and corporations control distribution: can take down or block content
+- Downloads / installs are a barrier to consumption: small business pages
+- Closed ecosystem: proprietary engines, steep learning curves, siloed experiences, fragmentation
+- We want VR to be successful, so we want a platform without these points of friction. The answer is WebVR...
 
 ------
 
@@ -93,26 +100,46 @@ An open virtual reality platform with the advantages of **the Web**
 </div>
 
 <!-- NOTES -->
-- Anyone can publish, open source, open standards
-- Traverse from world to world, not siloed experiences
-- Click a link, immediately get into an experience, easily sharable via links,
-  great for long tail bite-sized experiences
-- Can't wait for the platform to bake and crystallize for years before Web gets involved
+WebVR is...virtual reality in the browser, powered by the Internet
+
+Open:
+- Anyone can publish
+- Open source culture with open standards
+
+Connected:
+- Traverse worlds
+
+Instant:
+- Click a link on Twitter or Weibo, immediate VR experiences
+- No installs
+- Imagine for long tail experiences: shopping & personal spaces
+- Great for long tail bite-sized experiences
+
+Transition:
+- Web has advantages that make it the best platform for the people
+- Need to act to make it reality, can't wait for VR to bake and crystallize
+- Get involved
 
 ---
 
 <img class="stretch" data-src="media/img/webvr.png">
 
-Standard browser APIs that enable WebGL rendering to headsets and access to VR
+Browser APIs that enable WebGL rendering to headsets and access to VR
 sensors
+
 https://w3c.github.io/webvr/
 
 <!-- NOTES -->
-- Working W3C community group
-- Initial WebVR API by Mozilla (Vlad V.)
-- Mozilla, Google, Samsung, Microsoft, community currently drafting WebVR 1.0 API
-- Optimized rendering path to headsets, 90fps+
+API:
+- Optimized rendering path to headsets
 - Access position and rotation (pose) data
+
+History:
+- Initial WebVR API by Mozilla
+- Working W3C community group
+- Mozilla, Google, Samsung, Microsoft, community currently iterating WebVR 1.0 API
+
+Not just a specification, it's implemented...
 
 ---
 
@@ -136,12 +163,10 @@ https://w3c.github.io/webvr/
 </div>
 
 <!-- NOTES -->
-- Browser support
 - Firefox + Chrome WebVR 1.0 hits release channels by early 2017
-- Firefox Nightly: first WebVR browser
-- Chromium: custom Chromium builds by Brandon Jones
-- Samsung: GearVR browser, with a flag
-- Mobile Polyfill: use device motion/orientation sensors to polyfill on smartphones
+- Currently behind Nightly, custom builds, and flags
+- Mobile Polyfill: use device motion / orientation sensors to polyfill on smartphones
+- With all the browsers behind it...
 
 ---
 
@@ -150,14 +175,28 @@ https://w3c.github.io/webvr/
 ## The Web is Ready for VR
 
 <!-- NOTES -->
-- The Web is capable of VR
-- Walk in a web page, reach out with your hands
+- Today, walk in web page and reach out with your hands
+- Fast
+- WebVR page where we can walk around and paint in 3D space
+- Web developers getting involved to experiment, prototype, create, we are
+  pitching into foundations of Metaverse...
 
 ---
 
 ## Metaverse
 
 <!-- .slide: data-background="media/img/metaverse.png" -->
+
+<!-- NOTES -->
+- Shared persistent collective virtual spaces
+- Alternate digital reality that the world may live, work, play
+- Must be decentralized/open/connected, the Web is best platform to fully realize
+- Where do we begin?
+- three.js abstracts WebGL, 3D, and WebVR, but could still make it more accessible
+
+---
+
+Too hard to create WebVR experiences...
 
 ---
 
@@ -179,10 +218,10 @@ https://w3c.github.io/webvr/
 </div>
 
 <!-- NOTES -->
-- Too difficult to create WebVR experiences
-- Obstacle if doing small prototypes and experiments
-- Boilerplate needs updating with new versions of WebVR, three.js, and
-  handle cross-browser and cross-platform compatibility
+- It's still too difficult to create WebVR experiences
+- Huge obstacle if doing small prototypes and experiments
+- Boilerplate needs updating with new versions of WebVR, three.js, and browser quirks
+- Encapsulate all of that into one line...
 
 ---
 
@@ -193,8 +232,7 @@ https://w3c.github.io/webvr/
 ```
 
 <!-- NOTES -->
-- "What if we could encapsulate all that boilerplate to just one line of HTML?"
-- Quickly go from idea to prototype without hassle
+- And...
 
 ---
 
@@ -209,19 +247,22 @@ scene.add(box);
 
 <!-- NOTES -->
 - Creating the simplest object in vanilla three.js
-- Takes five lines and three variables
+- Takes five lines, three classes, three variables for a box
+- We could make that simple too...
 
 ---
 
 <!-- .slide: data-transition="concave" -->
 
 ```html
-<a-box color="red" position="10 0 10"></a-box>
+<a-scene>
+  <a-box color="red" position="10 0 10"></a-box>
+</a-scene>
 ```
 
 <!-- NOTES -->
-- "What if we could encapsulate objects into a single lines of HTML?"
-- Quickly build scenes without worry
+- Makes WebVR a lot easier, easier means more content, more content advances platform
+- So the Mozilla VR team created...
 
 ------
 
@@ -232,12 +273,11 @@ scene.add(box);
 A declarative framework for building virtual reality experiences on the Web
 
 <!-- NOTES -->
-- A-Frame launched December 2015 by the Mozilla VR team
-- Make it easy for anyone to create VR content
-- Further democratize the dark arts of graphics
-- Enable web developers
-- Prototype and experiment faster
-- A vehicle to kickstart WebVR ecosystem
+- Launched last December
+- Why:
+  - Easy for web developers to create VR content, without graphics knowledge
+  - Prototype and experiment WebVR and VR UX faster
+  - Vehicle to kickstart WebVR ecosystem
 
 ---
 
@@ -257,9 +297,12 @@ A declarative framework for building virtual reality experiences on the Web
 <!-- .element: class="stretch" -->
 
 <!-- NOTES -->
-- Parsable: HTML arguably most accessible language in computing
+- Simple HTML markup for a basic scene
+- Remember to manipulate on second display
+- Readable: HTML arguably most accessible language in computing
 - Declarative: visual representation of scene graph, fully represents state
 - Encapsulated: copy-and-paste HTML anywhere else and still work, no variables
+- And here's what we get...
 
 ---
 
@@ -270,11 +313,78 @@ A declarative framework for building virtual reality experiences on the Web
 <div class="stretch" data-aframe-scene="scenes/hello-world.html"></div>
 
 <!-- NOTES -->
-- Supports desktop, Android, iOS, Samsung Gear VR, Oculus Rift, HTC Vive
 - As web technology, we can embed within slides
-- And view source in DOM inspector and change values live
-- Can go fullscreen, would go into VR if a headset was connected
-- Can view on mobile if people go to aframe.io
+- Can view this in desktop, Android, iOS, Samsung Gear VR, Oculus Rift, HTC Vive
+- View source in DOM inspector and change values live
+- Based on DOM, compatible with all libraries/frameworks: d3.js, Vue.js, React
+
+---
+
+## MagicaVoxel
+
+<!-- .slide: data-transition="slide-in none" -->
+
+<img data-src="media/img/magicavoxel.png">
+
+<!-- NOTES -->
+- Can create scenes with MagicaVoxel
+- Super easy tool, drop blocks like Minecraft
+- Then export to A-Frame
+- Everything in previous talk, works in A-Frame as well
+
+---
+
+## MagicaVoxel
+
+<!-- .slide: data-transition="none" -->
+
+<div class="stretch" data-aframe-scene="scenes/magicavoxel.html"></div>
+
+<!-- NOTES -->
+- MagicaVoxel model in A-Frame, mostly a line of HTML
+- Show off the A-Frame Inspector by pressing `<ctrl> + <alt> + i`
+
+---
+
+## MagicaVoxel
+
+<!-- .slide: data-transition="none" -->
+
+<div class="stretch" data-aframe-scene="scenes/pokemon.html"></div>
+
+<!-- NOTES -->
+- Remember to manipulate and open inspector on second display
+
+---
+
+## tiny.cc/ningjs
+
+<div class="stretch" data-aframe-scene="scenes/multiuser.html"></div>
+
+<!-- NOTES -->
+- QR code was genius
+
+---
+
+```html
+<a-animation> <a-box> <a-camera> <a-circle> <a-collada-model>
+<a-cone> <a-cursor> <a-curvedimage> <a-cylinder>
+<a-dodecahedron> <a-isocahedron> <a-image> <a-light>
+<a-obj-model> <a-plane> <a-ring> <a-tetrahedron> <a-torus>
+<a-torus-knot> <a-sky> <a-sound> <a-sphere> <a-videosphere>
+```
+
+<!-- NOTES -->
+- Handful elements that ship with A-Frame, but this is just the start
+- Pretty easy to get a WebVR scene up and running
+- Go back to the multiuser
+
+---
+
+<!-- .slide: data-background-video="media/video/aframe-examples.mp4" data-background-video-loop="true" data-state="state--bg-dark" -->
+
+<!-- NOTES -->
+- Add new elements, behavior, functionality? A-Frame built with extensibility at its core
 
 ------
 
@@ -284,11 +394,12 @@ A declarative framework for building virtual reality experiences on the Web
 
 <!-- NOTES -->
 - Pattern popular in game development, used in game engines like Unity
-- All objects in scene are **entities** that inherently do nothing. Plug in
+- All objects in scene are **entities** that inherently empty objects. Plug in
   **components** to attach appearance / behavior / functionality
 - Favors composition over inheritance
 - Minecraft analogy: all blocks are entities, mix-and-match components to
-  create different kinds of blocks (appearance, physic, behavior, sound, strength)
+  create different kinds of blocks (appearance, physics, behavior, sound, strength)
+- Some more examples...
 
 ---
 
@@ -296,6 +407,7 @@ A declarative framework for building virtual reality experiences on the Web
 
 <!-- NOTES -->
 - Additional analogies: smartphone, vehicle
+- AFAIK A-Frame first tool to make ECS declarative
 
 ---
 
@@ -309,7 +421,6 @@ A declarative framework for building virtual reality experiences on the Web
 <!-- .element: class="stretch" -->
 
 <!-- NOTES -->
-- A-Frame invented declarative form of entity-component-system using HTML
 - Start with an `<a-entity>`
 - By itself, has no appearance, behavior, functionality
 - Plug in components to add appearance, behavior, functionality
@@ -425,50 +536,32 @@ A declarative framework for building virtual reality experiences on the Web
 
 <div class="stretch" data-aframe-scene="scenes/audio-visualizer.html"></div>
 
----
-
-## Baking an Entity
-
-```html
-<a-entity
-  audio-visualizer="src: #rickroll-mp3; smoothingTimeConstant: 0.9"
-  audio-visualizer-scale="max: 50; multiplier: 0.06"
-  entity-generator="mixin: bar; num: 256"
-  layout="type: circle; radius: 10">
-```
-<!-- .element: class="stretch" -->
-
-```html
-<a-udio-spectrum-visualizer src="#rickroll-mp3" num-bars="256" radius="10">
-```
-
 <!-- NOTES -->
-- Use `AFRAME.registerPrimitive` to create prefabs or templates of pre-composed
-  configuration of components
-- Define default components and component properties
-- Create mappings between component properties and HTML attributes
+- Have audio visualizer using that actual code, one line of HTML
+- HTML elements before abtraction
+- How to create components?
 
 ---
 
-## Basic Component
+## Writing a Component
 
 ```js
-AFRAME.registerComponent('position', {
-  schema: {type: 'vec3'},
+AFRAME.registerComponent('my-component', {
+  schema: {
+    foo: {type: 'selector'},
+    bar: {default: 256}
+  },
 
-  update: function () {
-    var el = this.el;
-    var data = this.data;
-    var object3D = el.object3D;
-
-    object3D.position.set(data.x, data.y, data.z);
-  }
+  init: function () { // ... },
+  update: function () { // ... },
+  remove: function () { // ... },
+  tick: function () { // ... }
 });
 ```
 <!-- .element: class="stretch" -->
 
 ```html
-<a-box position="-1 1 1"></a-box>
+<a-box my-component="foo: #box; bar: 300""></a-box>
 ```
 
 <!-- NOTES -->
@@ -485,127 +578,24 @@ AFRAME.registerComponent('position', {
 
 ---
 
-## Writing a Component
-
-```js
-AFRAME.registerComponent('crazy-position', {
-  schema: {
-    min: {type: 'vec3'},
-    max: {type: 'vec3'}
-  },
-
-  tick: function () {
-    var data = this.data;
-    var randomPosition = __getRandomPosition(min, max);
-    this.el.object3D.position.copy(randomPosition);
-  }
-});
-```
-<!-- .element: class="stretch" -->
-
-```html
-<a-sphere crazy-position="min: -1 -1 -1; max: 1 1 1"></a-sphere>
-```
+<!-- .slide: data-background="media/img/standard-components.png" data-background-size="contain" -->
 
 <!-- NOTES -->
-- Component that sets random position on each tick
-- Can be reused and composed with other components for variety of situations
-- Can be shared to other developers
-- Grants 100% extensibility, maintain access to JS / three.js / WebGL
+- Components that ship with A-Frame
+- Bare bones, allow ecosystem to enable features
+
+---
+
+<!-- .slide: data-background="media/img/community-components.png" data-background-size="contain" -->
+
+<!-- NOTES -->
+- Components built by the community and ecosystem
+- Developers enabling others
+- Components can be consumed without programming knowledge
 
 ------
 
-# Integration
-
-```js
-const scene = document.querySelector('a-scene');
-
-const sphere = document.createElement('a-sphere');
-
-sphere.setAttribute('radius', 2);
-
-sphere.addEventListener('click', function () {
-  this.setAttribute('color', 'red');
-});
-
-scene.appendChild(sphere);
-```
-<!-- .element: class="stretch" -->
-
-<!-- NOTES -->
-- Integrates with web languages and APIs
-- Fully controllable through JavaScript and DOM APIs
-
----
-
-<div class="captioned-image-row">
-  <div>
-    <img data-src="media/img/d3.png">
-    <i>d3.js</i>
-  </div>
-  <div>
-    <img data-src="media/img/vue.png">
-    <i>vue.js</i>
-  </div>
-  <div>
-    <img data-src="media/img/react.png">
-    <i>React & Redux</i>
-  </div>
-</div>
-
-<!-- NOTES -->
-- Based on DOM
-- Can integrate with existing libraries and web frameworks
-
----
-
-<div class="captioned-image-row">
-  <div>
-    <img data-src="media/img/magicavoxel-circle.png">
-    <i>MagicaVoxel</i>
-  </div>
-  <div>
-    <img data-src="media/img/blender.png">
-    <i>Blender</i>
-  </div>
-  <div>
-    <img data-src="media/img/maya.png">
-    <i>Maya</i>
-  </div>
-</div>
-
-<!-- NOTES -->
-- Can be used alongside 3D tools
-- Create models and scenes to place into A-Frame
-
----
-
-## With MagicaVoxel
-
-<!-- .slide: data-transition="slide-in none" -->
-
-<img data-src="media/img/magicavoxel.png">
-
-<!-- NOTES -->
-- Can create scenes with MagicaVoxel
-- Super easy tool, drop blocks like Minecraft
-- Then export to A-Frame
-
----
-
-## With MagicaVoxel
-
-<!-- .slide: data-transition="none" -->
-
-<div class="stretch" data-aframe-scene="scenes/magicavoxel.html"></div>
-
-<!-- NOTES -->
-- MagicaVoxel model in A-Frame, mostly a line of HTML
-- Show off the A-Frame Inspector by pressing `<ctrl> + <alt> + i`
-
-------
-
-# Ecosystem
+# Community
 
 <div class="captioned-image-row">
   <div>
@@ -627,23 +617,6 @@ scene.appendChild(sphere);
 - Most work done on GitHub
 - Active community on Slack to share projects, interact, hang out, seek help
 - Featured projects on the `awesome-aframe` repository and *A Week of A-Frame* blog
-
----
-
-<!-- .slide: data-background="media/img/standard-components.png" data-background-size="contain" -->
-
-<!-- NOTES -->
-- Components that ship with A-Frame
-- Bare bones, allow ecosystem to enable features
-
----
-
-<!-- .slide: data-background="media/img/community-components.png" data-background-size="contain" -->
-
-<!-- NOTES -->
-- Components built by the community and ecosystem
-- Developers enabling others
-- Components can be consumed without programming knowledge
 
 ---
 
@@ -706,11 +679,13 @@ iStaging
 
 <!-- .slide: class="slide__questions" data-background="media/img/scene-collage.jpg" style="background-color: rgba(30, 30, 30, 0.3)" -->
 
-# Questions?  <!-- .element: style="color: #FFF" -->
+# Help Invent the Future  <!-- .element: style="color: #FFF" -->
 
 - Try it out [aframe.io](https://aframe.io)
+- See what people have made [aframe.io/blog](https://aframe.io/blog)
 - Join us on Slack [aframevr-slack.herokuapp.com](https://aframevr-slack.herokuapp.com/)
 - Follow us [@aframevr](https://twitter.com/aframevr)
+- Contribute on [github.com/aframevr/aframe](https://github.com/aframevr/aframe)
 
 <!-- NOTES -->
 - Homepage which has examples, documentation, blog

@@ -1,0 +1,46 @@
+<a-scene embedded inspector="src/vendor/js/aframe-inspector.min.js">
+  <a-assets>
+    <a-asset-item id="stadium-ply" src="media/models/stadium.ply"></a-asset-item>
+    <a-asset-item id="seating-ply" src="media/models/seating.ply"></a-asset-item>
+    <a-asset-item id="pikachu-ply" src="media/models/pikachu.ply"></a-asset-item>
+    <img id="charizard" src="media/img/charizard.png">
+    <audio id="song" autoplay loop src="media/audio/pokemon-gym-battle.mp3"></audio>
+  </a-assets>
+
+  <!-- Model. -->
+  <a-entity ply-model="src: #stadium-ply"
+            position="0 -11 -27" scale=".8 .8 .8" rotation="-90 0 0"></a-entity>
+  <!-- Facing user. -->
+  <a-entity ply-model="src: #seating-ply"
+            position="0 -8 -110" scale=".8 .8 .8" rotation="-90 90 0"></a-entity>
+  <!-- Stage left. -->
+  <a-entity ply-model="src: #seating-ply"
+            position="-65 -8 -10" scale=".8 .8 .8" rotation="-90 180 0"></a-entity>
+  <!-- Stage right. -->
+  <a-entity ply-model="src: #seating-ply"
+            position="65 -8 -10" scale=".8 .8 .8" rotation="-90 0 0"></a-entity>
+  <!-- Pikachu. -->
+  <a-entity position="1.4 -0.6 -3">
+    <a-entity ply-model="src: #pikachu-ply" scale=".1 .1 .1" rotation="-90 -80 0"></a-entity>
+    <a-sphere src="media/img/lightning.jpg" position="0 0 -0.5" rotation="-90 0 0"
+              color="#FFF" radius="1.8" opacity="0.3" shader="flat"
+              animation="property: opacity; loop: true; to: 0.4; dur: 1000"></a-sphere>
+  </a-entity>
+
+  <!-- Particles. -->
+  <a-entity particle-system="preset: dust; particleCount: 1000" position="0 2.5 -15"></a-entity>
+
+  <a-image src="#charizard" transparent="true" shader="standard" position="0 7 -40"
+           scale="20 20 1" look-at="[camera]"></a-image>
+
+  <!-- Lights. -->
+  <a-light type="ambient" color="#777"></a-light>
+  <a-entity animation="property: rotation; to: 0 360 0; easing: linear; loop: true;
+                       duration: 2000">
+    <a-light type="point" color="#FFF" position="-10 10 -15" intensity="0.3"></a-light>
+    <a-light type="point" color="#FFF" position="10 10 -15" intensity="0.3"></a-light>
+  </a-entity>
+
+  <a-sky color="#111"></a-sky>
+  <a-camera position="0 1.8 4"></a-camera>
+</a-scene>

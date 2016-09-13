@@ -26,15 +26,11 @@ Official starter slides for giving talks and presentations about A-Frame.
 - A-Frame
   - Introduction
   - Hello World
-  - Primitives
+  - Multiuser Demo
 - Entity-Component-System
   - Concept
   - Composing an Entity
-  - Writing a Component
-- Integration
-  - JavaScript
-  - Libraries & Frameworks
-  - 3D Tools
+  - Structure of a Component
 - Ecosystem
   - Community
   - Components
