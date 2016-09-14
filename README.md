@@ -2,7 +2,7 @@
 
 Official starter slides for giving talks and presentations about A-Frame.
 
-[VIEW SLIDES](https://ngokevin.github.io/aframe-presentation-kit/)
+[VIEW SLIDES](https://aframe.io/aframe-presentation-kit/#/)
 
 ## Installation
 
