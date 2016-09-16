@@ -398,7 +398,7 @@ body:not(.aframe-inspector-opened) .toggle-edit {
 }
 
 .slide__title .talk-title {
-  height: 260px;
+  height: 500px;
   margin: auto;
   position: absolute;
   top: 0; left: 0; bottom: 0; right: 0;
@@ -407,7 +407,7 @@ body:not(.aframe-inspector-opened) .toggle-edit {
 .slide__title .talk-info {
   font-weight: 200;
   position: relative;
-  top: 70%;
+  top: 40%;
 }
 
 div.slide__boilerplate {
