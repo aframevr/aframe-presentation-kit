@@ -437,3 +437,8 @@ div.slide__boilerplate + video {
   opacity: 0.5;
   z-index: 0;
 }
+
+.aframe-inspector-opened .slides {
+  margin: 0 !important;
+  zoom: 1 !important;
+}
