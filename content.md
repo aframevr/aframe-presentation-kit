@@ -1,17 +1,16 @@
-<!-- .slide: class="slide__title" data-background-video="media/video/aframe-logo.mp4" data-background-video-loop="true" data-state="state--bg-blue" -->
+<!-- .slide: data-background="media/img/aframe.jpg" -->
 
 <div class="talk-title">
   <h1>A-Frame</h1>
-  <h2>Building VR on the Web</h2>
+  <p>A web framework for building VR experiences</p>
   <p class="talk-info">
-    @you | mozvr.com | aframe.io
+    @you | Company | **aframe.io**
   </p>
 </div>
 
 <!-- NOTES -->
-- Introduce yourself
-- Goal: bring high-performance VR to the Web, creating an open/connected VR platform
-- WebVR, why we need VR on the Web, and how to build WebVR experiences
+- Onboard web developers into the 3D and VR world with easy-to-use tools
+- Prototype WebVR experiences faster
 
 ------
 
@@ -320,52 +319,6 @@ A declarative framework for building virtual reality experiences on the Web
 
 ---
 
-## MagicaVoxel
-
-<!-- .slide: data-transition="slide-in none" -->
-
-<img data-src="media/img/magicavoxel.png">
-
-<!-- NOTES -->
-- Can create scenes with MagicaVoxel
-- Super easy tool, drop blocks like Minecraft
-- Then export to A-Frame
-- Everything in previous talk, works in A-Frame as well
-
----
-
-## MagicaVoxel
-
-<!-- .slide: data-transition="none" -->
-
-<div class="stretch" data-aframe-scene="scenes/magicavoxel.html"></div>
-
-<!-- NOTES -->
-- MagicaVoxel model in A-Frame, mostly a line of HTML
-- Show off the A-Frame Inspector by pressing `<ctrl> + <alt> + i`
-
----
-
-## MagicaVoxel
-
-<!-- .slide: data-transition="none" -->
-
-<div class="stretch" data-aframe-scene="scenes/pokemon.html"></div>
-
-<!-- NOTES -->
-- Remember to manipulate and open inspector on second display
-
----
-
-## tiny.cc/ningjs
-
-<div class="stretch" data-aframe-scene="scenes/multiuser.html"></div>
-
-<!-- NOTES -->
-- QR code was genius
-
----
-
 ```html
 <a-animation> <a-box> <a-camera> <a-circle> <a-collada-model>
 <a-cone> <a-cursor> <a-curvedimage> <a-cylinder>
@@ -663,17 +616,6 @@ iStaging
 
 <!-- NOTES -->
 - Virtual real estate and apartment tours
-
----
-
-# Augmented Reality
-
-<video class="stretch" data-src="media/video/argon.mp4" data-autoplay loop></video>
-
-<!-- NOTES -->
-- Not just a framework for VR, can also handle 3D and AR as well
-- Prototype by Blair MacIntyre from Georgia Tech with Argon Browser
-- Most predict AR to be even bigger market than VR
 
 ------
 

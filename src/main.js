@@ -73,6 +73,8 @@ Reveal.addEventListener('slidechanged', function sceneResize (evt) {
   // Grab scene HTML.
   fetchScenes();
   sceneCache[sceneContainer.dataset.aframeScene].then(function (sceneHTML) {
+    // Add `embedded` always.
+    sceneHTML = sceneHTML.replace('<a-scene', '<a-scene embedded');
     setTimeout(function () {
       sceneContainer.innerHTML = sceneHTML;
     }, 800);
