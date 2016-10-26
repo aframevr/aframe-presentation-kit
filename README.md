@@ -6,7 +6,7 @@ Official starter slides for giving talks and presentations about A-Frame.
 
 ## Installation
 
-1. [Download the repository (.ZIP)](https://github.com/ngokevin/aframe-presentation-kit/archive/master.zip)
+1. [Download the repository (.ZIP)](http://github.com/aframevr/aframe-presentation-kit/zipball/master) (>200MB)
 2. Start the local server (`npm run start`)
 3. Open `http://localhost:8080` in your browser
 
@@ -91,4 +91,4 @@ screen, or if you have a headset connected, enter VR.
 Open up a scene in the A-Frame Inspector by pressing `<ctrl> + <alt> + i` on
 your keyboard. This will open up an embedded A-Frame scene in a visual tool.
 
-Check out these [public speaking guide](http://speaking.io/) and good luck!
+Check out this [public speaking guide](http://speaking.io/) and good luck!
