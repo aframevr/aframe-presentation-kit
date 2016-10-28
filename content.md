@@ -4,7 +4,7 @@
   <h1>A-Frame</h1>
   <p>A web framework for building VR experiences</p>
   <p class="talk-info">
-    @you | Company | **aframe.io**
+    @you | company | **aframe.io**
   </p>
 </div>
 
@@ -169,19 +169,6 @@ Not just a specification, it's implemented...
 
 ---
 
-<!-- .slide: data-background-video="media/video/roomscale.mp4" data-state="state--bg-dark" -->
-
-## The Web is Ready for VR
-
-<!-- NOTES -->
-- Today, walk in web page and reach out with your hands
-- Fast
-- WebVR page where we can walk around and paint in 3D space
-- Web developers getting involved to experiment, prototype, create, we are
-  pitching into foundations of Metaverse...
-
----
-
 ## Metaverse
 
 <!-- .slide: data-background="media/img/metaverse.png" -->
@@ -222,47 +209,6 @@ Too hard to create WebVR experiences...
 - Boilerplate needs updating with new versions of WebVR, three.js, and browser quirks
 - Encapsulate all of that into one line...
 
----
-
-<!-- .slide: data-transition="concave" -->
-
-```html
-<a-scene></a-scene>
-```
-
-<!-- NOTES -->
-- And...
-
----
-
-```js
-// Box in three.js
-var geometry = new THREE.BoxGeometry(1, 2, 3);
-var material = new THREE.MeshStandardMaterial({color: 'red'});
-var box = new THREE.Mesh(geometry, material);
-box.position.set(10, 0, 10);
-scene.add(box);
-```
-
-<!-- NOTES -->
-- Creating the simplest object in vanilla three.js
-- Takes five lines, three classes, three variables for a box
-- We could make that simple too...
-
----
-
-<!-- .slide: data-transition="concave" -->
-
-```html
-<a-scene>
-  <a-box color="red" position="10 0 10"></a-box>
-</a-scene>
-```
-
-<!-- NOTES -->
-- Makes WebVR a lot easier, easier means more content, more content advances platform
-- So the Mozilla VR team created...
-
 ------
 
 # A-Frame
@@ -282,62 +228,111 @@ A declarative framework for building virtual reality experiences on the Web
 
 ## Hello World
 
-<!-- .slide: data-transition="slide-in none" -->
+<!-- .slide: data-background="media/img/aframe.png" data-transition="slide-in none" -->
 
 ```html
-<a-scene>
-  <a-box color="#4CC3D9" position="-1 0.5 -3" rotation="0 45 0"></a-box>
-  <a-cylinder color="#FFC65D" position="1 0.75 -3" radius="0.5" height="1.5"></a-cylinder>
-  <a-sphere color="#EF2D5E" position="0 1.25 -5" radius="1.25"></a-sphere>
-  <a-plane color="#7BC8A4" position="0 0 -4" rotation="-90 0 0" width="4" height="4"></a-plane>
-  <a-sky color="#ECECEC"></a-sky>
-</a-scene>
+<html>
+  <script src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>
+  <a-scene>
+
+
+
+
+
+  </a-scene>
+</html>
 ```
 <!-- .element: class="stretch" -->
 
 <!-- NOTES -->
-- Simple HTML markup for a basic scene
-- Remember to manipulate on second display
-- Readable: HTML arguably most accessible language in computing
-- Declarative: visual representation of scene graph, fully represents state
-- Encapsulated: copy-and-paste HTML anywhere else and still work, no variables
-- And here's what we get...
+- Just HTML
+- Drop a script tag, no build steps
+- Using Custom HTML Elements
+- One line of HTML `<a-scene>` handles
+  - canvas, camera, renderer, lights, controls, render loop, WebVR polyfill, VREffect
+- Put stuff inside our scene...
 
 ---
 
 ## Hello World
 
-<!-- .slide: data-transition="none" -->
-
-<div class="stretch" data-aframe-scene="scenes/hello-world.html"></div>
-
-<!-- NOTES -->
-- As web technology, we can embed within slides
-- Can view this in desktop, Android, iOS, Samsung Gear VR, Oculus Rift, HTC Vive
-- View source in DOM inspector and change values live
-- Based on DOM, compatible with all libraries/frameworks: d3.js, Vue.js, React
-
----
+<!-- .slide: data-background="media/img/aframe.png" data-transition="fade-in slide-out" -->
 
 ```html
-<a-animation> <a-box> <a-camera> <a-circle> <a-collada-model>
-<a-cone> <a-cursor> <a-curvedimage> <a-cylinder>
-<a-dodecahedron> <a-isocahedron> <a-image> <a-light>
-<a-obj-model> <a-plane> <a-ring> <a-tetrahedron> <a-torus>
-<a-torus-knot> <a-sky> <a-sound> <a-sphere> <a-videosphere>
+<html>
+  <script src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>
+  <a-scene>
+    <a-box color="#4CC3D9" position="-1 0.5 -3" rotation="0 45 0"></a-box>
+    <a-cylinder color="#FFC65D" position="1 0.75 -3" radius="0.5" height="1.5"></a-cylinder>
+    <a-sphere color="#EF2D5E" position="0 1.25 -5" radius="1.25"></a-sphere>
+    <a-plane color="#7BC8A4" position="0 0 -4" rotation="-90 0 0" width="4" height="4"></a-plane>
+    <a-sky color="#ECECEC"></a-sky>
+  </a-scene>
+</html>
 ```
+<!-- .element: class="stretch" -->
 
 <!-- NOTES -->
-- Handful elements that ship with A-Frame, but this is just the start
-- Pretty easy to get a WebVR scene up and running
-- Go back to the multiuser
+- Basic 3D primitives with Custom Elements
+- Readable: HTML arguably most accessible language in computing
+- Encapsulated: copy-and-paste HTML anywhere else and still work, no state or variables
+- Quickly look at a live example...
 
 ---
 
-<!-- .slide: data-background-video="media/video/aframe-examples.mp4" data-background-video-loop="true" data-state="state--bg-dark" -->
+## Hello Metaverse
+
+<i>by Ada Rose Edwards (@lady_ada_king)</i>
+
+<!-- .slide: data-background="media/img/metaverse.png" -->
+
+<div class="stretch" data-aframe-scene="scenes/80s.html"></div>
 
 <!-- NOTES -->
-- Add new elements, behavior, functionality? A-Frame built with extensibility at its core
+- A-Frame scene by Ada Rose Edwards running from inside my HTML slides
+- Works on desktop, Android, iOS, Samsung Gear VR, Oculus Rift, HTC Vive
+- Could open up the DOM Inspector to change values live
+- Since it's just HTML...
+
+---
+
+<!-- .slide: data-background="media/img/aframe.jpg" -->
+
+## Works With Everything
+
+<div class="captioned-image-row">
+  <div>
+    <img data-src="media/img/d3.png">
+    <i>d3.js</i>
+  </div>
+  <div>
+    <img data-src="media/img/vue.png">
+    <i>Vue.js</i>
+  </div>
+  <div>
+    <img data-src="media/img/react.png">
+    <i>React</i>
+  </div>
+  <div>
+    <img data-src="media/img/redux.png">
+    <i>Redux</i>
+  </div>
+  <div>
+    <img data-src="media/img/jquery.png">
+    <i>jQuery</i>
+  </div>
+  <div>
+    <img data-src="media/img/angular.png">
+    <i>Angular</i>
+  </div>
+</div>
+
+<!-- NOTES -->
+
+- Based on HTML, compatible with all existing libraries/frameworks
+- Good reason to have HTML as an intermediary layer between WebGL/three.js
+- All tools were on top of the notion of HTML
+- Under the hood, A-Frame is an extensible, declarative framework for three.js...
 
 ------
 
@@ -346,25 +341,16 @@ A declarative framework for building virtual reality experiences on the Web
 <!-- .slide: data-background="media/img/minecraft-blocks.png" -->
 
 <!-- NOTES -->
-- Pattern popular in game development, used in game engines like Unity
+- Is an entity-component framework
+- Popular in game development, used by Unity
 - All objects in scene are **entities** that inherently empty objects. Plug in
   **components** to attach appearance / behavior / functionality
-- Favors composition over inheritance
-- Minecraft analogy: all blocks are entities, mix-and-match components to
-  create different kinds of blocks (appearance, physics, behavior, sound, strength)
-- Some more examples...
+- 2D web where every element was fixed
+- 3D/VR is different, objects of infinite types and complexities, need an easy way to build up different kinds of objects
 
 ---
 
-<!-- .slide: data-background="media/img/entity-component-system.png" data-background-size="contain" data-state="state--bg-white" -->
-
-<!-- NOTES -->
-- Additional analogies: smartphone, vehicle
-- AFAIK A-Frame first tool to make ECS declarative
-
----
-
-<!-- .slide: data-transition="slide-in none" -->
+<!-- .slide: data-background="media/img/minecraft-blocks.png" data-transition="slide-in none" -->
 
 ## Composing an Entity
 
@@ -382,121 +368,86 @@ A declarative framework for building virtual reality experiences on the Web
 
 ## Composing an Entity
 
-<!-- .slide: data-transition="none" -->
+<!-- .slide: data-background="media/img/minecraft-blocks.png" data-transition="none" -->
 
 ```html
 <a-entity
-  audio-visualizer="src: #rickroll-mp3; smoothingTimeConstant: 0.9">
+  geometry="primitive: sphere; radius: 1.5"
+  material="color: #343434; roughness: 0.4; sphericalEnvMap: #texture">
 ```
 <!-- .element: class="stretch" -->
 
 <!-- NOTES -->
-- Attach component via HTML attribute
-- `audio-visualizer` component hooks up with Web Audio API's AnalyserNode, specify audio
-- Component can consist of multiple properties
-- Use syntax similar to CSS styles to configure components
-- Analogy of CSS styling DOM elements, and components configuring entities
+- Syntax similar to CSS styles
+- Component names as HTML attributes
+- Component properties and values as HTML attribute value
 
 ---
 
 ## Composing an Entity
 
-<!-- .slide: data-transition="none" -->
+<!-- .slide: data-background="media/img/minecraft-blocks.png" data-transition="none" -->
 
 ```html
 <a-entity
-  audio-visualizer="src: #rickroll-mp3; smoothingTimeConstant: 0.9"
-  audio-visualizer-scale="max: 50; multiplier: 0.06">
+  geometry="primitive: sphere; radius: 1.5"
+  material="color: #343434; roughness: 0.4; sphericalEnvMap: #texture"
+  position="-1 2 4" rotation="45 0 90" scale="2 2 2">
 ```
 <!-- .element: class="stretch" -->
-
-<!-- NOTES -->
-- `audio-visualizer-scale` component scales children based on frequency data
-- Using data set up by `audio-visualizer`
-- Need to generate children
 
 ---
 
 ## Composing an Entity
 
-<!-- .slide: data-transition="none" -->
+<!-- .slide: data-background="media/img/minecraft-blocks.png" data-transition="none" -->
 
 ```html
 <a-entity
-  audio-visualizer="src: #rickroll-mp3; smoothingTimeConstant: 0.9"
-  audio-visualizer-scale="max: 50; multiplier: 0.06"
-  entity-generator="mixin: bar; num: 256">
+  geometry="primitive: sphere; radius: 1.5"
+  material="color: #343434; roughness: 0.4; sphericalEnvMap: #texture"
+  position="-1 2 4" rotation="45 0 90" scale="2 2 2"
+  animation="property: rotation; loop: true; to: 0 360 0"
+  movement-pattern="type: spline; speed: 4">
 ```
 <!-- .element: class="stretch" -->
-
-<!-- NOTES -->
-- `entity-generator` component creates a number of entities, defined by mixins, as children
-- Create 256 bars that will be scaled by `audio-visualizer-scale`
 
 ---
 
 ## Composing an Entity
 
-<!-- .slide: data-transition="none" -->
+<!-- .slide: data-background="media/img/minecraft-blocks.png" data-transition="none" -->
 
 ```html
 <a-entity
-  audio-visualizer="src: #rickroll-mp3; smoothingTimeConstant: 0.9"
-  audio-visualizer-scale="max: 50; multiplier: 0.06"
-  entity-generator="mixin: bar; num: 256">
-
-
-<a-mixin
-  id="bar"
-  geometry="primitive: box"
-  material="color: black"
-  color-via-scale-y="from: 10 60 10; to: 180 255 180; maxScale: 15">
+  json-model="src: #robot"
+  position="-1 2 4" rotation="45 0 90" scale="2 2 2"
+  animation="property: rotation; loop: true; to: 0 360 0"
+  movement-pattern="type: spline; speed: 4">
 ```
 <!-- .element: class="stretch" -->
-
-<!-- NOTES -->
-- Mixins are reusable groups of components, similar to CSS classes
-- Create mixin for box that maps its color to its height
-- `entity-generator` component creates 256 of these bars
 
 ---
 
 ## Composing an Entity
 
-<!-- .slide: data-transition="none" -->
+<!-- .slide: data-background="media/img/minecraft-blocks.png" data-transition="none" -->
 
 ```html
 <a-entity
-  audio-visualizer="src: #rickroll-mp3; smoothingTimeConstant: 0.9"
-  audio-visualizer-scale="max: 50; multiplier: 0.06"
-  entity-generator="mixin: bar; num: 256"
-  layout="type: circle; radius: 10">
-
-<a-mixin
-  id="bar"
-  geometry="primitive: box"
-  material="color: black"
-  color-via-scale-y="from: 10 60 10; to: 180 255 180; maxScale: 15">
+  json-model="src: #robot"
+  position="-1 2 4" rotation="45 0 90" scale="2 2 2"
+  animation="property: rotation; loop: true; to: 0 360 0"
+  movement-pattern="type: attack; target: #player"
+  explode="on: hit">
 ```
 <!-- .element: class="stretch" -->
-
-<!-- NOTES -->
-- `layout` component to lay out all the bars in a circle, 10-meter radius
-
----
-
-## Composing an Entity
-
-<div class="stretch" data-aframe-scene="scenes/audio-visualizer.html"></div>
-
-<!-- NOTES -->
-- Have audio visualizer using that actual code, one line of HTML
-- HTML elements before abtraction
-- How to create components?
 
 ---
 
 ## Writing a Component
+
+<!-- .slide: data-background="media/img/minecraft-blocks.png" data-transition="none" -->
 
 ```js
 AFRAME.registerComponent('my-component', {
@@ -534,30 +485,76 @@ AFRAME.registerComponent('my-component', {
 <!-- .slide: data-background="media/img/standard-components.png" data-background-size="contain" -->
 
 <!-- NOTES -->
-- Components that ship with A-Frame
-- Bare bones, allow ecosystem to enable features
+- These are some components that ship with A-Frame
+- A-Frame is fully extensible at its core so...
 
 ---
 
 <!-- .slide: data-background="media/img/community-components.png" data-background-size="contain" -->
 
 <!-- NOTES -->
-- Components built by the community and ecosystem
-- Developers enabling others
-- Components can be consumed without programming knowledge
+- Community has filled the ecosystem with tons of components
+- Components can do whatever they want, have full access to three.js and Web APIs
+- The component ecosystem the lifeblood of A-Frame
+- Physics, leap motion, particle systems, audio visualizations, oceans
+- Drop these components as script tags and use them straight from HTML
+- Advanced developers empowering other developers
+- Working on collecting these components...
+
+---
+
+<div class="icon-title">
+  <img data-src="media/img/registry.png" width="64">
+  <h2>Registry</h2>
+</div>
+
+<!-- .slide: data-background="media/img/aframe-side.png" -->
+
+Curated collection of A-Frame components/shaders.
+
+<a class="stretch" href="https://aframe.io/aframe-registry">
+  <video loop data-src="media/video/registrypreview.mp4" data-autoplay></video>
+</a>
+
+<!-- NOTES -->
+- Collecting them into the A-Frame registry
+- Like a store of components that we make sure work well
+- People can browse and search for components or install them....
+
+---
+
+## Inspector
+
+<!-- .slide: data-background="media/img/inspector.png" data-state="state--bg-dark" -->
+
+Visual tool for A-Frame. Just `<ctrl>+<alt>+i`.
+
+<div class="stretch" data-aframe-scene="scenes/80s.html"></div>
 
 ------
 
-# Community
+<!-- .slide: data-background-video="media/video/a-painter.mp4" data-background-video-muted="true" data-state="state--bg-dark" -->
+
+## A-Painter
+
+Paint in VR in the browser.
+
+<!-- NOTES -->
+- A-Frame is very powerful
+- 90+fps room-scale TiltBrush experience in a few weeks with just A-Frame
+
+---
+
+# aframe.io
 
 <div class="captioned-image-row">
   <div>
     <img data-src="media/img/github.png">
-    <i>60 contributors, 3000 Stargazers</i>
+    <i>75 contributors 3500 Stargazers</i>
   </div>
   <div>
     <img data-src="media/img/slack.png">
-    <i>1400 members on Slack</i>
+    <i>1750 members on Slack</i>
   </div>
   <div>
     <img data-src="media/img/scene-collage-circle.png">
@@ -570,66 +567,3 @@ AFRAME.registerComponent('my-component', {
 - Most work done on GitHub
 - Active community on Slack to share projects, interact, hang out, seek help
 - Featured projects on the `awesome-aframe` repository and *A Week of A-Frame* blog
-
----
-
-<!-- .slide: data-background="media/img/360syria.jpg" -->
-
-## Fear of the Sky
-
-Amnesty International UK
-
-[360syria.com](http://360syria.com)
-
-<!-- NOTES -->
-- Journalism, e-commerce, and real estate popular production use cases
-
----
-
-## Stand at the Edge of Geologic Time
-
-<!-- .slide: data-background="media/img/npr.png" -->
-
-National Public Radio (NPR)
-
-[apps.npr.org/rockymountain-vr](http://apps.npr.org/rockymountain-vr/)
-
----
-
-<!-- .slide: data-background="media/img/mars.jpg" -->
-
-## Journey to Mars
-
-The Washington Post
-
-[washingtonpost.com/video/mars/public/](https://www.washingtonpost.com/video/mars/public/)
-
----
-
-<!-- .slide: data-background-video="media/video/livetour.mp4" data-background-video-loop="true" -->
-
-## LiveTour
-
-iStaging
-
-[vrviewer.istaging.co/#!/684173](http://vrviewer.istaging.co/#!/684173)
-
-<!-- NOTES -->
-- Virtual real estate and apartment tours
-
-------
-
-<!-- .slide: class="slide__questions" data-background="media/img/scene-collage.jpg" style="background-color: rgba(30, 30, 30, 0.3)" -->
-
-# Help Invent the Future  <!-- .element: style="color: #FFF" -->
-
-- Try it out [aframe.io](https://aframe.io)
-- See what people have made [aframe.io/blog](https://aframe.io/blog)
-- Join us on Slack [aframevr-slack.herokuapp.com](https://aframevr-slack.herokuapp.com/)
-- Follow us [@aframevr](https://twitter.com/aframevr)
-- Contribute on [github.com/aframevr/aframe](https://github.com/aframevr/aframe)
-
-<!-- NOTES -->
-- Homepage which has examples, documentation, blog
-- Slack extremely active, core team responsive, over 1300 people
-- Keep up to date by following on Twitter
