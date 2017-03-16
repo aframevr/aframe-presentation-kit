@@ -19,23 +19,22 @@ Official starter slides for giving talks and presentations about A-Frame.
 - WebVR
   - Advantages
   - API
-  - Browser Support
-  - The Web is Ready for VR
+  - Browsers
   - Metaverse
   - Barrier to Entry
 - A-Frame
   - Introduction
   - Hello World
-  - Multiuser Demo
+  - Demo
+  - Works With Everything
 - Entity-Component-System
   - Concept
   - Composing an Entity
-  - Structure of a Component
-- Ecosystem
-  - Community
-  - Components
-  - Scenes
-- Conclusion
+  - Registry
+  - Inspector
+- Community
+  - Examples
+  - Numbers
 
 ## Modifying Design
 
