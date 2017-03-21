@@ -4,7 +4,7 @@
   <h1>A-Frame</h1>
   <p>A web framework for building VR experiences</p>
   <p class="talk-info">
-    @you | company | **aframe.io**
+    @andgokevin | Mozilla VR | **aframe.io**
   </p>
 </div>
 
@@ -179,7 +179,7 @@ https://webvr.rocks
 
 ## Metaverse
 
-<!-- .slide: data-background="media/img/metaverse.png" -->
+<!-- .slide: data-background="media/img/metaverse.jpg" -->
 
 <!-- NOTES -->
 - Shared persistent collective virtual spaces
@@ -292,7 +292,7 @@ A web framework for building virtual reality experiences
 
 <i>by Ada Rose Edwards (@lady_ada_king)</i>
 
-<!-- .slide: data-background="media/img/metaverse.png" -->
+<!-- .slide: data-background="media/img/metaverse.jpg" -->
 
 <div class="stretch" data-aframe-scene="scenes/80s.html"></div>
 
