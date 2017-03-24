@@ -236,7 +236,7 @@ A web framework for building virtual reality experiences
 
 ## Hello World
 
-<!-- .slide: data-background="media/img/aframe.png" data-transition="slide-in none" -->
+<!-- .slide: data-background="media/img/aframe.jpg" data-transition="slide-in none" -->
 
 ```html
 <html>
@@ -264,7 +264,7 @@ A web framework for building virtual reality experiences
 
 ## Hello World
 
-<!-- .slide: data-background="media/img/aframe.png" data-transition="fade-in slide-out" -->
+<!-- .slide: data-background="media/img/aframe.jpg" data-transition="fade-in slide-out" -->
 
 ```html
 <html>
