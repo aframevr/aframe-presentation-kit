@@ -620,11 +620,11 @@ iStaging
 <div class="captioned-image-row">
   <div>
     <img data-src="media/img/github.png">
-    <i>125 contributors 5000 Stargazers</i>
+    <i>180+ contributors 6000+ Stargazers</i>
   </div>
   <div>
     <img data-src="media/img/slack.png">
-    <i>3000 members on Slack</i>
+    <i>4000+ members on Slack</i>
   </div>
   <div>
     <img data-src="media/img/scene-collage-circle.png">
