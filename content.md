@@ -137,8 +137,8 @@ https://webvr.rocks
 
 <div class="captioned-image-row small">
   <div>
-    <img data-src="media/img/firefox-nightly.png">
-    <i>Firefox Nightly</i>
+    <img data-src="media/img/firefox.png">
+    <i>Firefox</i>
   </div>
   <div>
     <img data-src="media/img/edge.jpg">
@@ -171,7 +171,7 @@ https://webvr.rocks
 
 <!-- NOTES -->
 - Firefox + Chrome WebVR 1.0 hits release channels by early 2017
-- Currently behind Nightly, custom builds, and flags
+- Firefox 55 adds support for WebVR, released on August 08, 2017
 - Mobile Polyfill: use device motion / orientation sensors to polyfill on smartphones
 - With all the browsers behind it...
 
