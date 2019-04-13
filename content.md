@@ -300,49 +300,8 @@ A web framework for building virtual reality experiences
 - A-Frame scene by Ada Rose Edwards running from inside my HTML slides
 - Works on desktop, Android, iOS, Samsung Gear VR, Oculus Rift, HTC Vive
 - Could open up the DOM Inspector to change values live
-- Since it's just HTML...
 
 ---
-
-<!-- .slide: data-background="media/img/aframe.jpg" -->
-
-## Works With Everything
-
-<div class="captioned-image-row">
-  <div>
-    <img data-src="media/img/d3.png">
-    <i>d3.js</i>
-  </div>
-  <div>
-    <img data-src="media/img/vue.png">
-    <i>Vue.js</i>
-  </div>
-  <div>
-    <img data-src="media/img/react.png">
-    <i>React</i>
-  </div>
-  <div>
-    <img data-src="media/img/redux.png">
-    <i>Redux</i>
-  </div>
-  <div>
-    <img data-src="media/img/jquery.png">
-    <i>jQuery</i>
-  </div>
-  <div>
-    <img data-src="media/img/angular.png">
-    <i>Angular</i>
-  </div>
-</div>
-
-<!-- NOTES -->
-
-- Based on HTML, compatible with all existing libraries/frameworks
-- Good reason to have HTML as an intermediary layer between WebGL/three.js
-- All tools were on top of the notion of HTML
-- Under the hood, A-Frame is an extensible, declarative framework for three.js...
-
-------
 
 # Entity-Component-System
 
