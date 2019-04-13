@@ -19,7 +19,7 @@
     "webvr",
     "slidedeck"
   ],
-  "author": "Kevin Ngo <kngo@mozilla.com>",
+  "author": "Kevin Ngo <kevin@supermedium.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/aframevr/aframe-presentation-kit/issues"
