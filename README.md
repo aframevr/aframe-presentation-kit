@@ -3,6 +3,7 @@
 Official starter slides for giving talks and presentations about A-Frame.
 
 [VIEW SLIDES](https://aframe.io/aframe-presentation-kit/#/)
+* [Ver la presentación en español](https://mozillaperu.github.io/aframe-presentation-kit/#/)
 
 ## Installation
 
